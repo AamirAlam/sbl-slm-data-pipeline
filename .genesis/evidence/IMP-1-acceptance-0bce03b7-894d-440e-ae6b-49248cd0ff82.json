@@ -1,0 +1,30 @@
+{
+  "task": "IMP-1",
+  "gate": "acceptance",
+  "kind": "command",
+  "attempt": "0bce03b7-894d-440e-ae6b-49248cd0ff82",
+  "command": "python3 -m unittest -v tests.test_ingest",
+  "started_at": "2026-09-24T21:31:30.715Z",
+  "observed_at": "2026-09-24T21:31:31.190Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_adr_ambiguity_and_identity_conflict (tests.test_ingest.IngestionTests.test_adr_ambiguity_and_identity_conflict) ... ok\ntest_changed_source_keeps_identity_but_changes_revision (tests.test_ingest.IngestionTests.test_changed_source_keeps_identity_but_changes_revision) ... ok\ntest_cli_safe_summary_and_errors (tests.test_ingest.IngestionTests.test_cli_safe_summary_and_errors) ... ok\ntest_conflicting_and_identical_duplicate_ids_rejected (tests.test_ingest.IngestionTests.test_conflicting_and_identical_duplicate_ids_rejected) ... ok\ntest_corruption_and_checksum (tests.test_ingest.IngestionTests.test_corruption_and_checksum) ... ok\ntest_count_and_split_mismatch (tests.test_ingest.IngestionTests.test_count_and_split_mismatch) ... ok\ntest_deterministic_packet_and_source_preservation (tests.test_ingest.IngestionTests.test_deterministic_packet_and_source_preservation) ... ok\ntest_duplicate_keys_and_nonfinite_json_rejected (tests.test_ingest.IngestionTests.test_duplicate_keys_and_nonfinite_json_rejected) ... ok\ntest_future_and_current_messages_rejected_in_history (tests.test_ingest.IngestionTests.test_future_and_current_messages_rejected_in_history) ... ok\ntest_missing_id_and_wrong_types (tests.test_ingest.IngestionTests.test_missing_id_and_wrong_types) ... ok\ntest_naive_source_timestamps_are_preserved_without_inventing_utc (tests.test_ingest.IngestionTests.test_naive_source_timestamps_are_preserved_without_inventing_utc) ... ok\ntest_phase_a_excludes_response_and_future_context (tests.test_ingest.IngestionTests.test_phase_a_excludes_response_and_future_context) ... ok\ntest_representation_mismatch (tests.test_ingest.IngestionTests.test_representation_mismatch) ... ok\ntest_target_contract (tests.test_ingest.IngestionTests.test_target_contract) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.086s\n\nOK\n",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+  "before_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+  "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+  "environment": {
+    "node": "v24.10.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+    "variables": {}
+  },
+  "hash": "651a741cbb7b3dff6a076bbeec1cf0afc9b73b97ac18cb5ffab6d64fe50f497f"
+}

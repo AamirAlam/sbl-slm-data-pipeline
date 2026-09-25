@@ -1,0 +1,30 @@
+{
+  "task": "IMP-2",
+  "gate": "acceptance",
+  "kind": "command",
+  "attempt": "a72452d8-4bec-4e55-8316-dc8a5f044068",
+  "command": "python3 -m unittest -v tests.test_review",
+  "started_at": "2026-09-25T06:41:15.526Z",
+  "observed_at": "2026-09-25T06:41:16.468Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_capabilities_and_draft_claims (tests.test_review.ReviewTests.test_capabilities_and_draft_claims) ... ok\ntest_capture_replay_and_fixture_cannot_approve (tests.test_review.ReviewTests.test_capture_replay_and_fixture_cannot_approve) ... ok\ntest_concurrent_write_rejected_without_partial_state (tests.test_review.ReviewTests.test_concurrent_write_rejected_without_partial_state) ... ok\ntest_conflicting_revision_rejected (tests.test_review.ReviewTests.test_conflicting_revision_rejected) ... ok\ntest_context_first_per_reviewer (tests.test_review.ReviewTests.test_context_first_per_reviewer) ... ok\ntest_deleted_reference_detected (tests.test_review.ReviewTests.test_deleted_reference_detected) ... ok\ntest_disagreement_requires_owner_adjudication (tests.test_review.ReviewTests.test_disagreement_requires_owner_adjudication) ... ok\ntest_explicit_acceptance_and_attribution (tests.test_review.ReviewTests.test_explicit_acceptance_and_attribution) ... ok\ntest_journal_truncation_detected (tests.test_review.ReviewTests.test_journal_truncation_detected) ... ok\ntest_missing_evidence_cannot_be_approved (tests.test_review.ReviewTests.test_missing_evidence_cannot_be_approved) ... ok\ntest_no_replay_duplicates (tests.test_review.ReviewTests.test_no_replay_duplicates) ... ok\ntest_policy_change_stales_approval (tests.test_review.ReviewTests.test_policy_change_stales_approval) ... ok\ntest_private_permissions_and_safe_cli (tests.test_review.ReviewTests.test_private_permissions_and_safe_cli) ... ok\ntest_rejection_is_explicit_and_terminal (tests.test_review.ReviewTests.test_rejection_is_explicit_and_terminal) ... ok\ntest_source_change_stales_approval (tests.test_review.ReviewTests.test_source_change_stales_approval) ... ok\ntest_tampered_objects_and_missing_references (tests.test_review.ReviewTests.test_tampered_objects_and_missing_references) ... ok\ntest_uncertain_capture_and_live_calls_blocked (tests.test_review.ReviewTests.test_uncertain_capture_and_live_calls_blocked) ... ok\ntest_uncertainty_and_revision_keep_history (tests.test_review.ReviewTests.test_uncertainty_and_revision_keep_history) ... ok\ntest_unmeasured_confidence_and_unknown_citation (tests.test_review.ReviewTests.test_unmeasured_confidence_and_unknown_citation) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.514s\n\nOK\n",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf",
+  "before_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf",
+  "config_hash": "e3a7876c04862f6d575df8b48e6fc8d69cbe2b55d6a8900bf868000a67ec4bbd",
+  "environment": {
+    "node": "v24.10.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+    "variables": {}
+  },
+  "hash": "22a7d4278ad04c8c5132dc2a010c33a4acdb8b5d941cc6f0c9d32d82874b7f03"
+}

@@ -1,0 +1,13 @@
+{
+  "task": "IMP-1",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "c556e85c-5d48-4993-88d4-bb2b99f630ce",
+  "human": "Aamir",
+  "reason": "Carry forward the existing explicit human review approval for unchanged source f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17 after the user-approved .DS_Store harness fix. Executable tests were rerun successfully; this does not claim a new human review.",
+  "observed_at": "2026-09-24T21:31:41.586Z",
+  "source_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+  "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+  "reviewed_proofs": "a5e1493228c612afbf3183127a5410dee0555ad17bb315fc149e924221efcc89",
+  "hash": "70b46640f593ca640304f4f5553c963b2b905c2fb907955bc39bdef25c24e20f"
+}

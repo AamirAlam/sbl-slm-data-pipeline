@@ -1,0 +1,997 @@
+{
+  "schema_version": 2,
+  "project": {
+    "name": "sbl-slm",
+    "mode": "adopt",
+    "profile": "prototype",
+    "objective": "Implement a verifiable ADR data-labeling and decision workflow for the SLM project",
+    "constraints": [],
+    "non_goals": [],
+    "trust_boundary": "local repository",
+    "created_at": "2026-09-24T18:23:37.428Z",
+    "updated_at": "2026-09-25T06:41:25.816Z"
+  },
+  "policy": {
+    "ponytail": "full",
+    "autonomy": "human-in-the-loop",
+    "learned_rule_promotion": "human-required",
+    "cleanup": "propose-only",
+    "traces": {
+      "storage": "local",
+      "commit_raw": false,
+      "redact_secrets": true
+    }
+  },
+  "lifecycle": {
+    "phase": "build",
+    "status": "active",
+    "active_task": "IMP-2",
+    "blocker": "Independent human review pending; executable acceptance passed.",
+    "next_action": "Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3."
+  },
+  "commands": {},
+  "workflow": {
+    "type": "new-product",
+    "started_at": "2026-09-24T18:27:47.039Z",
+    "spec_check": {
+      "at": "2026-09-24T21:12:56.239Z",
+      "source_hash": "3a6e3f4edc71ceedd0c2b19363efe2470342cfe93c88fa584fc4163201033067",
+      "requirements": [
+        "AC-1",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-19",
+        "AC-2",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-3",
+        "AC-4",
+        "AC-5",
+        "AC-6",
+        "AC-7",
+        "AC-8",
+        "AC-9",
+        "FR-1",
+        "FR-10",
+        "FR-11",
+        "FR-12",
+        "FR-13",
+        "FR-14",
+        "FR-15",
+        "FR-16",
+        "FR-17",
+        "FR-18",
+        "FR-19",
+        "FR-2",
+        "FR-20",
+        "FR-21",
+        "FR-22",
+        "FR-23",
+        "FR-24",
+        "FR-25",
+        "FR-26",
+        "FR-3",
+        "FR-4",
+        "FR-5",
+        "FR-6",
+        "FR-7",
+        "FR-8",
+        "FR-9",
+        "NFR-1",
+        "NFR-2",
+        "NFR-3",
+        "NFR-4",
+        "NFR-5",
+        "NFR-6",
+        "NFR-7",
+        "NFR-8"
+      ]
+    },
+    "plan_check": {
+      "at": "2026-09-24T21:16:48.508Z",
+      "source_hash": "b9eedeebf14532e5fb4f59c1e4abdde54c6ae6fcf895494b62d6e6bb74019bd0"
+    },
+    "plan_approval": {
+      "human": "Aamir",
+      "reason": "User explicitly approved the presented implementation plan.",
+      "at": "2026-09-24T21:17:41.296Z",
+      "source_hash": "b9eedeebf14532e5fb4f59c1e4abdde54c6ae6fcf895494b62d6e6bb74019bd0"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "SPEC-1",
+      "type": "specification",
+      "path": "SPEC.md",
+      "status": "approved",
+      "requirements": [
+        "AC-1",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-19",
+        "AC-2",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-3",
+        "AC-4",
+        "AC-5",
+        "AC-6",
+        "AC-7",
+        "AC-8",
+        "AC-9",
+        "FR-1",
+        "FR-10",
+        "FR-11",
+        "FR-12",
+        "FR-13",
+        "FR-14",
+        "FR-15",
+        "FR-16",
+        "FR-17",
+        "FR-18",
+        "FR-19",
+        "FR-2",
+        "FR-20",
+        "FR-21",
+        "FR-22",
+        "FR-23",
+        "FR-24",
+        "FR-25",
+        "FR-26",
+        "FR-3",
+        "FR-4",
+        "FR-5",
+        "FR-6",
+        "FR-7",
+        "FR-8",
+        "FR-9",
+        "NFR-1",
+        "NFR-2",
+        "NFR-3",
+        "NFR-4",
+        "NFR-5",
+        "NFR-6",
+        "NFR-7",
+        "NFR-8"
+      ],
+      "source_hash": "3a6e3f4edc71ceedd0c2b19363efe2470342cfe93c88fa584fc4163201033067",
+      "approval": {
+        "human": "Aamir",
+        "reason": "User approved the current specification in response to the specification-approval question and requested creation of the implementation plan.",
+        "at": "2026-09-24T21:14:59.334Z",
+        "source_hash": "3a6e3f4edc71ceedd0c2b19363efe2470342cfe93c88fa584fc4163201033067"
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "ASSUMPTION-0dbadea5",
+      "text": "Unresolved and not silently defaulted: exact action/label taxonomy; always-human cases and evidence/confidence standards; separate holdout; first-release exclusions and review interface; runtime language; provider and local retention; exact model/version. No approved product facts, campaign rules or voice references are currently available. These require clarification or explicit proposal review before specification approval.",
+      "status": "superseded",
+      "source": "User clarification responses; ADRs/001-decision-point-curation-and-review.md:324",
+      "recorded_at": "2026-09-24T18:24:08.994Z",
+      "paths": [],
+      "tags": [],
+      "superseded_by": "ASSUMPTION-0efa149e"
+    },
+    {
+      "id": "ASSUMPTION-994b806c",
+      "text": "SPEC draft retains open choices for adjudicator authority/calibration, web authentication and hosting, runtime/export details, holdout source/isolation, near-duplicate policy, provider/local retention and data-use authority. Detailed enums and lifecycle are proposals for specification review, not fabricated user decisions. Structural spec checking does not resolve these questions.",
+      "status": "open",
+      "source": "SPEC.md: Open questions",
+      "recorded_at": "2026-09-24T18:35:03.163Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "ASSUMPTION-0efa149e",
+      "text": "Updated after user clarification: eight-action taxonomy, mandatory-human uncertainty rule, evidence-linked rationale, measured-only numerical confidence, web review and a separate holdout are confirmed. Actual model training is excluded per interpretation recorded in DECISION-e4e246c4. Remaining unresolved: adjudicator authority/audit calibration; web authentication/hosting; runtime and export shape; holdout source and duplicate policy; provider/local retention and data-use authority. No approved product/style references exist. Resolve open choices in SPEC.md before treating it as implementation-ready.",
+      "status": "open",
+      "source": "SPEC.md: Open questions; user clarification responses 2026-09-25",
+      "recorded_at": "2026-09-24T18:35:25.176Z",
+      "paths": [],
+      "tags": [],
+      "supersedes": "ASSUMPTION-0dbadea5"
+    },
+    {
+      "id": "ASSUMPTION-257f4d62",
+      "text": "SPEC.md now proposes completing the local review/export workflow while keeping live GPT calls disabled pending provider/model/retention authority and real-data training/evaluation release blocked pending data-use declaration. Local retention until explicit reviewed owner purge, per-release rounded-up 10% reproducible audit, material-error release blocking, normalized duplicate checks plus human near-duplicate review are proposals only. User continue did not approve the whole specification, implementation, provider retention or data use.",
+      "status": "open",
+      "source": "SPEC.md: Constraints; user continue",
+      "recorded_at": "2026-09-24T20:36:21.789Z",
+      "paths": [],
+      "tags": []
+    }
+  ],
+  "invariants": [
+    {
+      "id": "INVARIANT-6b575a51",
+      "text": "Preserve existing ADRs, raw source files, identifiers and structure. No rewriting, relabeling or migration without explicit authorization. Derived records must be versioned, reviewable and source-traceable. Require actual human specification approval and separate plan approval before product implementation; never infer or fabricate approvals.",
+      "source": "User operating rules and ADRs/001-decision-point-curation-and-review.md:22",
+      "recorded_at": "2026-09-24T18:24:08.762Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "INVARIANT-89509606",
+      "text": "A structural Genesis specification check is not human specification approval, not implementation-plan approval, and not execution of the product acceptance tests. Do not implement or create implementation tasks before actual required approvals. Keep unapproved proposals and open questions explicit.",
+      "source": "User operating rules; SPEC.md",
+      "recorded_at": "2026-09-24T18:35:25.266Z",
+      "paths": [],
+      "tags": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DECISION-64c5778b",
+      "title": "Adoption explicitly authorized",
+      "text": "User explicitly authorized adoption with --write after read-only discovery. Repository instruction connection was also requested. This authorizes setup, not specification approval, plan approval, implementation, or external data processing.",
+      "status": "accepted",
+      "source": "Conversation: user said run again with --write",
+      "recorded_at": "2026-09-24T18:24:08.609Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-238d6e44",
+      "title": "Confirmed labeling workflow",
+      "text": "Label conversation decision points governed by ADR-001, not ADR documents. Target is reviewed next action and optional draft. Link labels to applicable ADR/policy versions. Permit model approval for routine cases and human review for uncertainty. Support accept, reject, revise, uncertain, multiple reviewers and adjudication. Export JSON. Preserve existing 93 train, 15 validation and 3 test assignments. Changed ADR/policy makes affected approvals stale pending review.",
+      "status": "accepted",
+      "source": "ADRs/001-decision-point-curation-and-review.md:11; user clarification responses",
+      "recorded_at": "2026-09-24T18:24:08.688Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-a87815a8",
+      "title": "Reproducibility and provider boundary",
+      "text": "User requests both exact regeneration of accepted artifacts and repeatable model calls with sufficient execution provenance; identical fresh model outputs are not guaranteed. OpenAI GPT is a permitted provider in principle. Provider retention and local sensitive-artifact retention remain unresolved. No external source-text or private-prompt transmission is authorized until boundaries are resolved.",
+      "status": "accepted",
+      "source": "User clarification responses: both; gpt is permitted; ambiguous retention answer",
+      "recorded_at": "2026-09-24T18:24:08.844Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-663f9c34",
+      "title": "Taxonomy and human-review rule confirmed",
+      "text": "User approved eight actions: answer, clarify, qualify, invite_next_step, handoff_human, lookup, wait, stop, with separate correctness, factual-support, intent, policy and style assessments. User approved mandatory human review for conflicting/missing decision-relevant evidence, reviewer disagreement and unclear policy; require evidence-linked rationale and leave numeric confidence unset unless measured. This is not approval of SPEC.md or an implementation plan.",
+      "status": "accepted",
+      "source": "User responses 2026-09-25: Use this proposed taxonomy; Use this proposed review rule",
+      "recorded_at": "2026-09-24T18:35:02.814Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-e4e246c4",
+      "title": "Web review and separate holdout selected",
+      "text": "User selected web review and a separate holdout. Holdout records/source are not supplied and existing split memberships remain authoritative. Interpreted the affirmative answer to the named training exclusion as excluding actual model training from version one. Generic yes does not establish provider/local retention values. No raw data was repartitioned.",
+      "status": "accepted",
+      "source": "User response 2026-09-25: web review; seprate holdout; yes; yes",
+      "recorded_at": "2026-09-24T18:35:02.953Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-ce9346e1",
+      "title": "Local web review, audit and adjudication confirmed",
+      "text": "User answered yes to the explicit proposal: holdout not supplied yet; local-only web review without authentication and with self-declared reviewer names; humans handle uncertain/disputed cases and randomly audit 10% of routine model approvals; user is final adjudicator. Preserve current splits and obtain additional conversations for future holdout, excluded from development use. This approves these choices only, not the entire specification or implementation. Retention, model version and data-use authority remain unresolved.",
+      "status": "accepted",
+      "source": "Conversation: user yes to holdout/local-view/10-percent-audit/final-adjudicator question",
+      "recorded_at": "2026-09-24T18:44:05.118Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-d82164df",
+      "title": "Review model selected by user",
+      "text": "The user selected gpt-astra-low for model reviews and requested continued work. Preserve the exact requested model name without silent substitution. Executable provider ID/version and inference-setting mapping require verification before integration. This resolves the model preference in Q5; the user did not specify provider retention or data-use terms. Updated SPEC.md accordingly; specification and separate plan approval remain outstanding.",
+      "status": "superseded",
+      "source": "User: lets use gpt-astra-low model for reviews and continue working",
+      "recorded_at": "2026-09-24T21:11:48.472Z",
+      "paths": [],
+      "tags": [],
+      "superseded_by": "DECISION-6608d0cc"
+    },
+    {
+      "id": "DECISION-6608d0cc",
+      "title": "Exact review model and reasoning effort confirmed",
+      "text": "The user clarified the review configuration: model gpt-6-astra, reasoning_effort low. This replaces the earlier shorthand gpt-astra-low and resolves the requested model/settings ambiguity. Preserve these exact settings when implementing reviews. SPEC.md now reflects this configuration. No live model calls were made.",
+      "status": "accepted",
+      "source": "User clarification: gpt-6-astra configured with reasoning_effort low; use this model settings",
+      "recorded_at": "2026-09-24T21:12:56.057Z",
+      "paths": [],
+      "tags": [],
+      "supersedes": "DECISION-d82164df"
+    },
+    {
+      "id": "DECISION-c2c1c242",
+      "title": "Proposed implementation sequence and minimal runtime",
+      "text": "For plan review, propose Python standard library plus SQLite and a loopback-only plain HTML/JS review interface. IMPLEMENTATION.md describes private storage, phase-A separation, transactional review, model capture/replay, audit, deterministic release and recovery. IMP-1 through IMP-5 are sequential bounded tasks; only the first becomes eligible after plan approval, and each requires independent human review. Full queued coverage addresses all 57 specification requirements without one oversized implementation task. No product code or tests have been written. This is a planning proposal, not recorded human plan approval.",
+      "status": "accepted",
+      "source": "IMPLEMENTATION.md; approved SPEC.md; user requested implementation plan",
+      "recorded_at": "2026-09-24T21:16:48.367Z",
+      "paths": [],
+      "tags": []
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "KNOWLEDGE-60ea9d4a",
+      "title": "Read-only source discovery",
+      "text": "Eleven existing files: seven Markdown, two JSONL, one JSON, one text. ADRs contains ADR-001 and its plain-English companion; lowercase adr directory is empty. Data is extracted pseudonymized unreviewed conversation candidates, not an untouched database dump. Manifest reports 111 candidates, all training-ineligible. No present application code, schema validator, dependency manifest or tests. Historical checkpoint references to scripts and generated packets do not establish their current existence. Directory has no Git metadata. Two records were sampled for schema without printing message content.",
+      "source": "data/README.txt:3; data/manifest.jsonl:1; curation/checkpoints/002-protocol-and-packets.md:7; read-only discovery",
+      "tags": [],
+      "recorded_at": "2026-09-24T18:24:08.913Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-0330af66",
+      "title": "Resumed repository baseline",
+      "text": "Current repository has Git metadata with no HEAD commit; files are untracked. Earlier discovery recorded no Git repository and is now historical. Existing eleven ADR/data/checkpoint files still match their prior SHA-256 baseline. No application code or test command is present. Genesis index reports no document symbols; findings were confirmed directly in source. SPEC-1 is the sole active task.",
+      "source": "2026-09-25 git status, rev-parse, file inventory and hashes; .genesis/KICKOFF.md",
+      "tags": [],
+      "recorded_at": "2026-09-24T18:35:03.074Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-2ef90605",
+      "title": "Resume verification and specification approval boundary",
+      "text": "Resume verified source fingerprint 8e34d0ff3c97c92d313d778256afe8c92f1e9f3801e8bda358ecc31246533746 unchanged from the prior session. SPEC.md SHA-256 is 7f53861b2e70d797c593c54c4a7b8ff6b81d4f40c1c9c93b01b4ba181dab1cbb. Candidate JSONL SHA-256 matches the documented baseline b81e09627ed83cb88a46f31e76dc3e906b16939f4fa5bc3a06a45f4711a6a0ff. Genesis recover reconciled zero interrupted attempts and replayed no commands. The current specification structural check passed with 57 requirements and no problems; specification approval is null and independent review remains pending. No product acceptance tests were executed. Resume authorization does not supply the explicitly required specification or plan approval; next action remains human review of this exact specification.",
+      "source": "genesis brief/status/recover/spec check/spec status; shasum -a 256 SPEC.md data/candidates.jsonl",
+      "tags": [],
+      "recorded_at": "2026-09-24T20:59:43.276Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-256896de",
+      "title": "IMP-1 implemented and executable acceptance proof passed",
+      "text": "Implemented read-only ingestion, source/manifest integrity validation, deterministic versioned phase-A packets, ADR companion identity, eight-action target shape validation and safe CLI summaries. Genesis acceptance gate passes 14 invented-fixture tests on current source. Read-only integration validates 111 candidates with 93 train/15 validation/3 test, identical repeated bundle bytes, all six ADR/data hashes unchanged, and original candidate checksum intact. Source timestamps are naive and preserved with explicit uncertainty; current nonhistorical context is withheld from X. Python 3.14.7 and SQLite 3.53.4 observed. No labels, live calls or disk packet persistence created. Independent human review is pending; IMP-2 must not begin until IMP-1 completes.",
+      "source": "sbl_slm/ingest.py; sbl_slm/schema.py; tests/test_ingest.py; genesis gate . IMP-1; read-only integration check",
+      "tags": [],
+      "recorded_at": "2026-09-24T21:23:06.946Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-47a1b622",
+      "title": "IMP-1 human review approved; completion blocked by Finder metadata",
+      "text": "User explicitly confirmed review and passing results. Recorded Aamir independent-review approval through genesis control approve. Genesis task complete rejected IMP-1 solely for changes outside task scope: .DS_Store. The activation baseline contains .DS_Store hash b0545b8b26a64bfd9740e4bb3b17f6cb145a24ca1ab84ae057a9ffdc436718b0; current file hash is dac7529b72dfb6c75b0440d0e60a0ce1daffe50920e58871569f07ae8321ffd4. New .gitignore also excludes this file from the current manifest. Reviewed source and executable proof remain current. No metadata was overwritten, baseline reset, scope gate bypassed or IMP-2 work begun. Installed Genesis task set does not expose scope reconciliation; recovery does not rebaseline completed changes.",
+      "source": "genesis control approve/task complete; read-only baseline/current metadata comparison; installed Genesis CLI scope implementation",
+      "tags": [],
+      "recorded_at": "2026-09-24T21:26:56.580Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-682f3852",
+      "title": "Prepared narrow Finder metadata reconciliation patch for approval",
+      "text": "Prepared /tmp/genesis-ds-store-scope.patch but did not modify the installed Genesis CLI. The proposed change ignores only files named .DS_Store when checking task scope; all product file scope checks remain. A focused Node check verifies metadata removal/change is ignored and an out-of-scope source change is still rejected. Explicit owner approval is required before changing this installed workflow rule; current IMP-1 human review approval remains recorded.",
+      "source": "/tmp/genesis-ds-store-scope.patch; /tmp/test-genesis-ds-store-scope.mjs; installed Genesis listFiles/checkScope",
+      "tags": [],
+      "recorded_at": "2026-09-24T21:30:55.813Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-49bd8174",
+      "title": "IMP-2 review persistence and provenance proof passed",
+      "text": "Implemented SQLite private storage with restrictive permissions, immutable content-addressed objects, append-only hash-linked events, optimistic version checks, context-first phase-A review, observed-response reveal only after phase-A save, evidence-linked assessments, explicit adjudication, stale source/policy invalidation, model capture/replay provenance using model gpt-6-astra with reasoning_effort low, disabled live provider calls, capability/draft checks, and safe CLI summaries. Corrected one fixture assertion so identical proposal replay is tested as idempotent while a different child proposal conflicts. Genesis acceptance gate passes 33 tests across IMP-2 and IMP-1. No real data is persisted by tests; all fixtures are invented. Independent human review is now required.",
+      "source": "sbl_slm/store.py; sbl_slm/review.py; sbl_slm/cli.py; tests/test_review.py; genesis gate . IMP-2",
+      "tags": [],
+      "recorded_at": "2026-09-25T06:41:25.303Z",
+      "paths": []
+    }
+  ],
+  "tasks": [
+    {
+      "id": "SPEC-1",
+      "outcome": "Produce an approved, implementation-ready product specification",
+      "state": "done",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "SPEC.md"
+      ],
+      "dependencies": [],
+      "requirements": [],
+      "gates": [
+        {
+          "id": "independent-review",
+          "command": "",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "human": "Aamir",
+            "reason": "User approved the current specification in response to the specification-approval question and requested creation of the implementation plan.",
+            "source_hash": "e7211f8c87ccd08720262de3b47ccd3c230471a3496fe90256e86c470929c785",
+            "observed_at": "2026-09-24T21:14:59.334Z"
+          },
+          "kind": "review"
+        }
+      ],
+      "next_action": "Interview the human, record durable context, and replace every placeholder in SPEC.md.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-24T18:27:47.039Z",
+      "updated_at": "2026-09-24T21:14:59.334Z"
+    },
+    {
+      "id": "IMP-1",
+      "outcome": "Validate immutable sources and build versioned decision-point packets",
+      "state": "done",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "sbl_slm/__init__.py",
+        "sbl_slm/ingest.py",
+        "sbl_slm/schema.py",
+        "sbl_slm/cli.py",
+        "tests/__init__.py",
+        "tests/test_ingest.py",
+        "tests/fixtures",
+        "README.md",
+        ".gitignore"
+      ],
+      "dependencies": [],
+      "requirements": [
+        "FR-1",
+        "FR-2",
+        "FR-3",
+        "FR-4",
+        "FR-5",
+        "FR-16",
+        "FR-17",
+        "NFR-1",
+        "NFR-6",
+        "AC-1",
+        "AC-2",
+        "AC-3",
+        "AC-7"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [
+        {
+          "id": "IMP-1-scenario",
+          "actor": "Trusted local operator and named reviewers",
+          "scope": "Validate immutable sources and build versioned decision-point packets",
+          "environment": "Local Python 3 with SQLite; invented fixtures in temporary directories; network inference disabled",
+          "duration": "At most 5 minutes per automated fixture suite",
+          "observable": "Operator ingests invented valid, malformed, conflicting and duplicate representations; asserts stable IDs, correct X boundaries, explicit errors and unchanged source hashes.",
+          "gate": "acceptance"
+        }
+      ],
+      "gates": [
+        {
+          "id": "acceptance",
+          "kind": "command",
+          "command": "python3 -m unittest -v tests.test_ingest",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-1-acceptance-0bce03b7-894d-440e-ae6b-49248cd0ff82.json",
+            "hash": "651a741cbb7b3dff6a076bbeec1cf0afc9b73b97ac18cb5ffab6d64fe50f497f",
+            "source_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+            "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+            "observed_at": "2026-09-24T21:31:31.190Z"
+          }
+        },
+        {
+          "id": "independent-review",
+          "kind": "review",
+          "command": "",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-1-independent-review-c556e85c-5d48-4993-88d4-bb2b99f630ce.json",
+            "hash": "70b46640f593ca640304f4f5553c963b2b905c2fb907955bc39bdef25c24e20f",
+            "source_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+            "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+            "observed_at": "2026-09-24T21:31:41.586Z"
+          }
+        }
+      ],
+      "next_action": "Resolve the Genesis scope mismatch for unrelated Finder metadata through a supported reconciliation, then complete IMP-1 and start IMP-2. Do not request the already-recorded human review again.",
+      "blocker": "Completion scope check rejects unrelated .DS_Store metadata drift; human review and executable gates passed.",
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-24T21:15:54.589Z",
+      "updated_at": "2026-09-24T21:31:41.957Z",
+      "base_manifest": {
+        ".DS_Store": "b0545b8b26a64bfd9740e4bb3b17f6cb145a24ca1ab84ae057a9ffdc436718b0",
+        ".agents/skills/show-me/SKILL.md": "3dec837664d2a6c70afb2ebcc83c9b614ca62977ba570268a47f6c19c30e7102",
+        ".agents/skills/show-me/agents/openai.yaml": "881308a7f37a0d210eec66681a45d6db2e4dbdad8935b505929521a8e7cd28a1",
+        "ADRs/001-decision-point-curation-and-review-plain-english.md": "e6d2806483a2857b0727d627ddfb00b6f7212555ed0db029b0ed4557a753e659",
+        "ADRs/001-decision-point-curation-and-review.md": "7c3cc30f74a1370b3f31aa4c94244ff7df98c03d0b0ee123999db07eabc7dc1b",
+        "AGENTS.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "IMPLEMENTATION.md": "75f280f6a849998340ae43aab7131aa5ab8c699708cbc535b50a2d6fbaf3c721",
+        "SPEC.md": "5db6c0ae7fa44bb41a8562c589ed743b82760e07e22c2ee47e82a753cf68ad59",
+        "checkpoints.md": "4df492b6799507b6e8d94ed3746084eb62e90f934fbf2d8edfe3dee9345b1ba6",
+        "curation/checkpoints/001-inspection.md": "32bcaf3d0513dc1a4ed781739e6e81ab271002135baa029ab00c59bff710e98b",
+        "curation/checkpoints/002-protocol-and-packets.md": "2b8414a221db6f7daf86234787feefc7db28bd93ca0c441059ccf6d756de85f2",
+        "curation/checkpoints/003-review-authorization.md": "ecc32ecb101c7e55cbe381b0107c29cd33b8953bf0d4dad66b9a3c0442f4afa2",
+        "curation/checkpoints/004-workflow-diagram.md": "0569ffb5e373b7b3adbf388862c6cf497ace7d4e592b3786942e8035499d1659",
+        "data/README.txt": "497f13be58b15043ec78edd3533c4c08f2bd8ae8e7cc83316c6991dfb19ec03a",
+        "data/candidates-readable.json": "8397ca111c86bf5ea568dda8d55f940cc70ef27eb4276971a3813fd78686101b",
+        "data/candidates.jsonl": "6721af282b9dc1f60bfb43051f44468af368b1de168d5ae90479c0d7ea57e93c",
+        "data/manifest.jsonl": "fd36a70113b368e77385ba87ca7ca9af3eaf2c2a15faac831cc6131ed5673a0c",
+        "skills-lock.json": "bdb303dd394ec363bd0539e2ecabb52bfab78a5522849eb6e9641be7a2101b45"
+      }
+    },
+    {
+      "id": "IMP-2",
+      "outcome": "Persist proposals, context-first reviews, adjudication and model provenance",
+      "state": "active",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "sbl_slm/store.py",
+        "sbl_slm/review.py",
+        "sbl_slm/schema.py",
+        "sbl_slm/cli.py",
+        "tests/test_review.py",
+        "tests/fixtures",
+        "README.md"
+      ],
+      "dependencies": [
+        "IMP-1"
+      ],
+      "requirements": [
+        "FR-6",
+        "FR-7",
+        "FR-8",
+        "FR-9",
+        "FR-10",
+        "FR-11",
+        "FR-13",
+        "FR-14",
+        "FR-22",
+        "FR-25",
+        "NFR-2",
+        "NFR-4",
+        "NFR-5",
+        "AC-4",
+        "AC-5",
+        "AC-6",
+        "AC-9",
+        "AC-16",
+        "AC-17",
+        "AC-20",
+        "AC-21"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [
+        {
+          "id": "IMP-2-scenario",
+          "actor": "Trusted local operator and named reviewers",
+          "scope": "Persist proposals, context-first reviews, adjudication and model provenance",
+          "environment": "Local Python 3 with SQLite; invented fixtures in temporary directories; network inference disabled",
+          "duration": "At most 5 minutes per automated fixture suite",
+          "observable": "Reviewers record independent phase-A targets, reveal observations, disagree, revise and adjudicate; invalid transitions, stale evidence, forged provenance and conflicting writes fail atomically. External calls stay disabled.",
+          "gate": "acceptance"
+        }
+      ],
+      "gates": [
+        {
+          "id": "acceptance",
+          "kind": "command",
+          "command": "python3 -m unittest -v tests.test_review",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-2-acceptance-a72452d8-4bec-4e55-8316-dc8a5f044068.json",
+            "hash": "22a7d4278ad04c8c5132dc2a010c33a4acdb8b5d941cc6f0c9d32d82874b7f03",
+            "source_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf",
+            "config_hash": "e3a7876c04862f6d575df8b48e6fc8d69cbe2b55d6a8900bf868000a67ec4bbd",
+            "observed_at": "2026-09-25T06:41:16.468Z"
+          }
+        },
+        {
+          "id": "independent-review",
+          "kind": "review",
+          "command": "",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        }
+      ],
+      "next_action": "Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3.",
+      "blocker": "Independent human review pending; executable acceptance passed.",
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-24T21:15:54.697Z",
+      "updated_at": "2026-09-25T06:41:25.528Z",
+      "base_manifest": {
+        ".agents/skills/show-me/SKILL.md": "3dec837664d2a6c70afb2ebcc83c9b614ca62977ba570268a47f6c19c30e7102",
+        ".agents/skills/show-me/agents/openai.yaml": "881308a7f37a0d210eec66681a45d6db2e4dbdad8935b505929521a8e7cd28a1",
+        ".gitignore": "d437c3f9abe22df5389580cc95dc3b2fe0e63ecfbebec130a31a626dcbd4d800",
+        "ADRs/001-decision-point-curation-and-review-plain-english.md": "e6d2806483a2857b0727d627ddfb00b6f7212555ed0db029b0ed4557a753e659",
+        "ADRs/001-decision-point-curation-and-review.md": "7c3cc30f74a1370b3f31aa4c94244ff7df98c03d0b0ee123999db07eabc7dc1b",
+        "AGENTS.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "IMPLEMENTATION.md": "75f280f6a849998340ae43aab7131aa5ab8c699708cbc535b50a2d6fbaf3c721",
+        "README.md": "99ec2a5abd630e9f66a63044ccf5acb66cbcc535335e05d96a5ffa544781c687",
+        "SPEC.md": "5db6c0ae7fa44bb41a8562c589ed743b82760e07e22c2ee47e82a753cf68ad59",
+        "checkpoints.md": "4df492b6799507b6e8d94ed3746084eb62e90f934fbf2d8edfe3dee9345b1ba6",
+        "curation/checkpoints/001-inspection.md": "32bcaf3d0513dc1a4ed781739e6e81ab271002135baa029ab00c59bff710e98b",
+        "curation/checkpoints/002-protocol-and-packets.md": "2b8414a221db6f7daf86234787feefc7db28bd93ca0c441059ccf6d756de85f2",
+        "curation/checkpoints/003-review-authorization.md": "ecc32ecb101c7e55cbe381b0107c29cd33b8953bf0d4dad66b9a3c0442f4afa2",
+        "curation/checkpoints/004-workflow-diagram.md": "0569ffb5e373b7b3adbf388862c6cf497ace7d4e592b3786942e8035499d1659",
+        "data/README.txt": "497f13be58b15043ec78edd3533c4c08f2bd8ae8e7cc83316c6991dfb19ec03a",
+        "data/candidates-readable.json": "8397ca111c86bf5ea568dda8d55f940cc70ef27eb4276971a3813fd78686101b",
+        "data/candidates.jsonl": "6721af282b9dc1f60bfb43051f44468af368b1de168d5ae90479c0d7ea57e93c",
+        "data/manifest.jsonl": "fd36a70113b368e77385ba87ca7ca9af3eaf2c2a15faac831cc6131ed5673a0c",
+        "sbl_slm/__init__.py": "492799af87d1309b4f54b0093511fc22904e34c84ab5829bab790a81333e5d8c",
+        "sbl_slm/cli.py": "d957656ef0016f3bca1df3fae276c7bd31f7882ddc91302af0ffb373f7eae4c6",
+        "sbl_slm/ingest.py": "486da13ce72733262c9e3dce0d0535d6af4110e10c957c69dc981283fdbbb460",
+        "sbl_slm/schema.py": "dd1508e852ba58a9f89326856bbb3389307cf4745c328bfc87e20ed2a0c5bd07",
+        "skills-lock.json": "bdb303dd394ec363bd0539e2ecabb52bfab78a5522849eb6e9641be7a2101b45",
+        "tests/__init__.py": "d41c1b779f9e3227919b73fb66a740dfcbfd999576689d88747dd4cfba241e6a",
+        "tests/test_ingest.py": "56fef32f22f5e22fdfca6d7c5670e363ad5796d79e55fdad57d156c3cd071bb0"
+      }
+    },
+    {
+      "id": "IMP-3",
+      "outcome": "Provide loopback-only web review with explicit reviewer attribution",
+      "state": "queued",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "sbl_slm/web.py",
+        "sbl_slm/static",
+        "sbl_slm/cli.py",
+        "sbl_slm/review.py",
+        "tests/test_web.py",
+        "tests/fixtures",
+        "README.md"
+      ],
+      "dependencies": [
+        "IMP-2"
+      ],
+      "requirements": [
+        "FR-26",
+        "FR-7",
+        "FR-11",
+        "AC-22",
+        "NFR-4"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [
+        {
+          "id": "IMP-3-scenario",
+          "actor": "Trusted local operator and named reviewers",
+          "scope": "Provide loopback-only web review with explicit reviewer attribution",
+          "environment": "Local Python 3 with SQLite; invented fixtures in temporary directories; network inference disabled",
+          "duration": "At most 5 minutes per automated fixture suite",
+          "observable": "Named test reviewers complete accept, reject, revise, uncertain and adjudication flows against invented fixtures; HTTP checks and a browser walkthrough verify no observed response reaches the browser before phase A is saved.",
+          "gate": "acceptance"
+        }
+      ],
+      "gates": [
+        {
+          "id": "acceptance",
+          "kind": "command",
+          "command": "python3 -m unittest -v tests.test_web",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        },
+        {
+          "id": "independent-review",
+          "kind": "review",
+          "command": "",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        }
+      ],
+      "next_action": "After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-24T21:15:54.841Z",
+      "updated_at": "2026-09-24T21:15:54.841Z"
+    },
+    {
+      "id": "IMP-4",
+      "outcome": "Audit approvals and publish deterministic partition-safe JSON releases",
+      "state": "queued",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "sbl_slm/export.py",
+        "sbl_slm/audit.py",
+        "sbl_slm/schema.py",
+        "sbl_slm/store.py",
+        "sbl_slm/cli.py",
+        "tests/test_export.py",
+        "tests/fixtures",
+        "README.md"
+      ],
+      "dependencies": [
+        "IMP-3"
+      ],
+      "requirements": [
+        "FR-12",
+        "FR-18",
+        "FR-19",
+        "FR-20",
+        "FR-21",
+        "FR-24",
+        "NFR-3",
+        "NFR-8",
+        "AC-8",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-18",
+        "AC-23"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [
+        {
+          "id": "IMP-4-scenario",
+          "actor": "Trusted local operator and named reviewers",
+          "scope": "Audit approvals and publish deterministic partition-safe JSON releases",
+          "environment": "Local Python 3 with SQLite; invented fixtures in temporary directories; network inference disabled",
+          "duration": "At most 5 minutes per automated fixture suite",
+          "observable": "Operator freezes fixture release populations, reproduces the rounded-up 10 percent sample and JSON bytes, and blocks failed audits, missing data-use permission, leakage and unresolved duplicates. Absent holdout is reported explicitly.",
+          "gate": "acceptance"
+        }
+      ],
+      "gates": [
+        {
+          "id": "acceptance",
+          "kind": "command",
+          "command": "python3 -m unittest -v tests.test_export",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        },
+        {
+          "id": "independent-review",
+          "kind": "review",
+          "command": "",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        }
+      ],
+      "next_action": "After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-24T21:15:54.958Z",
+      "updated_at": "2026-09-24T21:15:54.958Z"
+    },
+    {
+      "id": "IMP-5",
+      "outcome": "Verify interruption recovery, version migration, rollback and full regression",
+      "state": "queued",
+      "risk": "medium",
+      "owner": null,
+      "scope": [
+        "sbl_slm/recovery.py",
+        "sbl_slm/store.py",
+        "sbl_slm/review.py",
+        "sbl_slm/export.py",
+        "sbl_slm/cli.py",
+        "tests/test_recovery.py",
+        "tests/fixtures",
+        "README.md"
+      ],
+      "dependencies": [
+        "IMP-4"
+      ],
+      "requirements": [
+        "FR-15",
+        "FR-23",
+        "NFR-5",
+        "NFR-7",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-19"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [
+        {
+          "id": "IMP-5-scenario",
+          "actor": "Trusted local operator and named reviewers",
+          "scope": "Verify interruption recovery, version migration, rollback and full regression",
+          "environment": "Local Python 3 with SQLite; invented fixtures in temporary directories; network inference disabled",
+          "duration": "At most 5 minutes per automated fixture suite",
+          "observable": "Operator interrupts fixture writes and publication, resumes without duplicate events, reconciles simulated uncertain provider attempts without retry, migrates derived versions with re-review, and rolls back release pointers without erasing history.",
+          "gate": "acceptance"
+        }
+      ],
+      "gates": [
+        {
+          "id": "acceptance",
+          "kind": "command",
+          "command": "python3 -m unittest -v tests.test_recovery",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        },
+        {
+          "id": "regression",
+          "kind": "command",
+          "command": "python3 -m unittest discover -s tests -v",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        },
+        {
+          "id": "independent-review",
+          "kind": "review",
+          "command": "",
+          "mandatory": true,
+          "status": "pending",
+          "evidence": null
+        }
+      ],
+      "next_action": "After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-24T21:15:55.083Z",
+      "updated_at": "2026-09-24T21:15:55.084Z"
+    }
+  ],
+  "learning_proposals": [],
+  "cleanup_proposals": [],
+  "controls": [
+    {
+      "id": "db03b70f-f74c-43cc-ae2e-038161b1a055",
+      "at": "2026-09-24T21:26:20.418Z",
+      "action": "approve",
+      "task": "IMP-1",
+      "human": "Aamir",
+      "reason": "User confirmed they reviewed IMP-1 and it is passing.",
+      "revision": null
+    },
+    {
+      "id": "c556e85c-5d48-4993-88d4-bb2b99f630ce",
+      "at": "2026-09-24T21:31:41.586Z",
+      "action": "approve",
+      "task": "IMP-1",
+      "human": "Aamir",
+      "reason": "Carry forward the existing explicit human review approval for unchanged source f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17 after the user-approved .DS_Store harness fix. Executable tests were rerun successfully; this does not claim a new human review.",
+      "revision": null
+    }
+  ],
+  "attempts": [
+    {
+      "id": "a98031f3-eee8-4a84-848a-53bf871df7e8",
+      "task": "IMP-1",
+      "kind": "gate",
+      "command": "python3 -m unittest -v tests.test_ingest",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 1663,
+      "child_pid": 1734,
+      "started_at": "2026-09-24T21:22:47.846Z",
+      "status": "passed",
+      "before_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+      "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+      "environment": {
+        "node": "v24.10.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-24T21:22:48.085Z"
+    },
+    {
+      "id": "0bce03b7-894d-440e-ae6b-49248cd0ff82",
+      "task": "IMP-1",
+      "kind": "gate",
+      "command": "python3 -m unittest -v tests.test_ingest",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 5045,
+      "child_pid": 5228,
+      "started_at": "2026-09-24T21:31:30.715Z",
+      "status": "passed",
+      "before_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+      "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+      "environment": {
+        "node": "v24.10.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-24T21:31:31.190Z"
+    },
+    {
+      "id": "a72452d8-4bec-4e55-8316-dc8a5f044068",
+      "task": "IMP-2",
+      "kind": "gate",
+      "command": "python3 -m unittest -v tests.test_review",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 9904,
+      "child_pid": 10003,
+      "started_at": "2026-09-25T06:41:15.526Z",
+      "status": "passed",
+      "before_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf",
+      "config_hash": "e3a7876c04862f6d575df8b48e6fc8d69cbe2b55d6a8900bf868000a67ec4bbd",
+      "environment": {
+        "node": "v24.10.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-25T06:41:16.468Z"
+    }
+  ],
+  "authorizations": [],
+  "experiments": [],
+  "incidents": [],
+  "discovery": {
+    "files": 11,
+    "languages": [],
+    "extensions": {
+      ".json": 1,
+      ".jsonl": 2,
+      ".md": 7,
+      ".txt": 1
+    },
+    "commands": {},
+    "legacy_genesis": false,
+    "revision": {
+      "commit": null,
+      "dirty": null,
+      "source_hash": "c9098c80a5ff0c92a760f709948ae51882eadd198894f4dc82d34c64e9d98d39"
+    }
+  },
+  "checkpoint": {
+    "at": "2026-09-25T06:41:25.786Z",
+    "revision": {
+      "commit": null,
+      "dirty": null,
+      "source_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf"
+    },
+    "active_task": "IMP-2",
+    "next_action": "Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3."
+  },
+  "legacy": null
+}

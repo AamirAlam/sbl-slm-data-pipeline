@@ -1,0 +1,13 @@
+{
+  "task": "IMP-1",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "db03b70f-f74c-43cc-ae2e-038161b1a055",
+  "human": "Aamir",
+  "reason": "User confirmed they reviewed IMP-1 and it is passing.",
+  "observed_at": "2026-09-24T21:26:20.418Z",
+  "source_hash": "f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17",
+  "config_hash": "781f5f67620ad179bd604f6104bcfd6af9d133ca6bb535a2f0da6ecae45ed9e8",
+  "reviewed_proofs": "f0f101765722911d5e4692f8c9573d4517e66b4d5f6b0e748383904ee9e382a1",
+  "hash": "3954824f4553f44ff4492bbe8be859655604e1a683bff4f271b893ae13c1527c"
+}
