@@ -18,27 +18,27 @@
 
 ### IMP-2 — Persist proposals, context-first reviews, adjudication and model provenance
 
-- state/risk: active / medium
+- state/risk: done / medium
 - requirements: FR-6, FR-7, FR-8, FR-9, FR-10, FR-11, FR-13, FR-14, FR-22, FR-25, NFR-2, NFR-4, NFR-5, AC-4, AC-5, AC-6, AC-9, AC-16, AC-17, AC-20, AC-21
 - scope: sbl_slm/store.py, sbl_slm/review.py, sbl_slm/schema.py, sbl_slm/cli.py, tests/test_review.py, tests/fixtures, README.md
-- gates: acceptance: python3 -m unittest -v tests.test_review, independent-review: pending
+- gates: acceptance: python3 -m unittest -v tests.test_review, independent-review: pass
 - next: Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3.
 
 ### IMP-3 — Provide loopback-only web review with explicit reviewer attribution
 
-- state/risk: queued / medium
+- state/risk: done / medium
 - requirements: FR-26, FR-7, FR-11, AC-22, NFR-4
 - scope: sbl_slm/web.py, sbl_slm/static, sbl_slm/cli.py, sbl_slm/review.py, tests/test_web.py, tests/fixtures, README.md
-- gates: acceptance: python3 -m unittest -v tests.test_web, independent-review: pending
-- next: After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.
+- gates: acceptance: python3 -m unittest -v tests.test_web, independent-review: pass
+- next: Human reviews IMP-3 web handler, dispatch contract and current acceptance evidence, then explicitly approves independent-review; complete IMP-3 through Genesis before beginning IMP-4.
 
 ### IMP-4 — Audit approvals and publish deterministic partition-safe JSON releases
 
-- state/risk: queued / medium
+- state/risk: active / medium
 - requirements: FR-12, FR-18, FR-19, FR-20, FR-21, FR-24, NFR-3, NFR-8, AC-8, AC-10, AC-11, AC-12, AC-18, AC-23
 - scope: sbl_slm/export.py, sbl_slm/audit.py, sbl_slm/schema.py, sbl_slm/store.py, sbl_slm/cli.py, tests/test_export.py, tests/fixtures, README.md
 - gates: acceptance: python3 -m unittest -v tests.test_export, independent-review: pending
-- next: After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.
+- next: Reconcile both approved webview usability corrections with Genesis scope, rerun the IMP-4 gate, and obtain independent review of export plus web behavior.
 
 ### IMP-5 — Verify interruption recovery, version migration, rollback and full regression
 

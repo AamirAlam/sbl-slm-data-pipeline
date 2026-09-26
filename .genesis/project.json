@@ -9,7 +9,7 @@
     "non_goals": [],
     "trust_boundary": "local repository",
     "created_at": "2026-09-24T18:23:37.428Z",
-    "updated_at": "2026-09-25T06:41:25.816Z"
+    "updated_at": "2026-09-26T07:31:13.754Z"
   },
   "policy": {
     "ponytail": "full",
@@ -25,9 +25,9 @@
   "lifecycle": {
     "phase": "build",
     "status": "active",
-    "active_task": "IMP-2",
-    "blocker": "Independent human review pending; executable acceptance passed.",
-    "next_action": "Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3."
+    "active_task": "IMP-4",
+    "blocker": "Webview usability corrections changed completed IMP-3 scope while IMP-4 is active; plan/task reconciliation required before completion.",
+    "next_action": "Reconcile both approved webview usability corrections with Genesis scope, rerun the IMP-4 gate, and obtain independent review of export plus web behavior."
   },
   "commands": {},
   "workflow": {
@@ -331,6 +331,16 @@
       "recorded_at": "2026-09-24T21:16:48.367Z",
       "paths": [],
       "tags": []
+    },
+    {
+      "id": "DECISION-2c7281d2",
+      "title": "Web review readability correction requested",
+      "text": "User reviewed the webview and found it too simple to show information clearly. Updated sbl_slm/web.py page layout with a readable two-column review workspace: conversation timeline, case limitations, technical packet details, state rail, larger target editor, and explicit phase/reveal guidance. Observed response remains hidden until phase A. This is an approved product usability correction, but it changes the completed IMP-3 web scope while IMP-4 is active; Genesis plan/task reconciliation is required before claiming IMP-4 completion. All 39 IMP-1 through IMP-4 tests still pass.",
+      "status": "accepted",
+      "source": "User feedback 2026-09-26; sbl_slm/web.py; unittest regression run",
+      "recorded_at": "2026-09-26T05:49:59.031Z",
+      "paths": [],
+      "tags": []
     }
   ],
   "knowledge": [
@@ -395,6 +405,78 @@
       "source": "sbl_slm/store.py; sbl_slm/review.py; sbl_slm/cli.py; tests/test_review.py; genesis gate . IMP-2",
       "tags": [],
       "recorded_at": "2026-09-25T06:41:25.303Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-daa0cb85",
+      "title": "IMP-3 web review proof passed",
+      "text": "Implemented a loopback-only ReviewServer and an equivalent testable HTTP dispatch contract. The review page escapes context, labels reviewer names self-declared/unverified, hides observed response until a saved phase-A target, requires CSRF on mutations, checks loopback Host for mutations, and exposes no private text in error summaries. Acceptance gate passes 36 tests including IMP-1 and IMP-2 regression tests. Socket binding was manually exercised with elevated permission; the gate uses an in-process HTTP contract because Genesis subprocesses cannot bind local sockets in the default sandbox. No browser or actual source data was used; fixtures are invented. Independent human review is pending.",
+      "source": "sbl_slm/web.py; tests/test_web.py; genesis gate . IMP-3; elevated loopback test run",
+      "tags": [],
+      "recorded_at": "2026-09-26T05:09:34.926Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-030edab4",
+      "title": "IMP-4 deterministic export and audit proof passed",
+      "text": "Implemented reproducible 10% routine-model audit sampling with round-up semantics and saved population/seed/algorithm, deterministic partitioned JSON export, holdout_status not_supplied reporting, data-use permission boundary, stale approval exclusion, source/message/prospect partition identity checks, and omission of observed responses/private rationale from releases. Acceptance gate passes 39 tests across IMP-1 through IMP-4. Fixture exports reproduce byte-identical JSON; live provider calls remain disabled and no real release is authorized without data-use evidence. Independent human review is pending.",
+      "source": "sbl_slm/audit.py; sbl_slm/export.py; tests/test_export.py; genesis gate . IMP-4",
+      "tags": [],
+      "recorded_at": "2026-09-26T05:13:08.961Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-01b9cee2",
+      "title": "Webview polish and interaction feedback implemented",
+      "text": "User found the clearer webview still too simple. Added a compact toolbar with draft badge and copy-revision action, action-aware guidance, local draft autosave/restoration, success styling, clearer reveal status, and cleaner responsive hierarchy. The page still hides the observed response until phase A and keeps all review semantics unchanged. All 39 regression tests pass. This remains a web-scope correction requiring Genesis reconciliation before the active IMP-4 task can complete.",
+      "source": "User feedback 2026-09-26; sbl_slm/web.py; regression unittest run",
+      "tags": [],
+      "recorded_at": "2026-09-26T06:50:48.779Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-6c1ea067",
+      "title": "Minimal review action chooser polished",
+      "text": "Further polished the webview per user request while keeping it clean: added a compact four-step review path, eight clear action buttons, hidden advanced JSON details, action-specific guidance, draft autosave/restoration, copy-revision control and success feedback. All 39 regression tests pass; phase gating and response protection are unchanged. This remains a web-scope correction requiring Genesis reconciliation before IMP-4 completion.",
+      "source": "User feedback 2026-09-26; sbl_slm/web.py; regression unittest run",
+      "tags": [],
+      "recorded_at": "2026-09-26T07:04:08.915Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-d1c0d1ba",
+      "title": "Webview aligned with Genesis dashboard theme",
+      "text": "Updated the review UI theme to match the Genesis dashboard: ink #1d302e, muted #61716b, paper #f6f7f2, line #dce3db, green #27664e, Georgia headings, restrained badges, flat white cards and dashboard-style spacing/focus states. Review flow and response gating are unchanged. All 39 regression tests pass. This remains part of the web-scope reconciliation already recorded for the active IMP-4 task.",
+      "source": "User request 2026-09-26; .genesis/dashboard.html; sbl_slm/web.py; regression unittest run",
+      "tags": [],
+      "recorded_at": "2026-09-26T07:08:02.695Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-ef47c028",
+      "title": "Genesis dashboard shell added to review webview",
+      "text": "The review page now uses a Genesis-style shell around the existing workspace: left sidebar with genesis mark and sections, paper background, white cards, dashboard spacing, ink/green palette, responsive collapse and dashboard typography. The generated HTML was checked for shell/sidebar/main markers and all 39 regression tests pass. Restart any previously running web server so it serves the updated template.",
+      "source": ".genesis/dashboard.html; sbl_slm/web.py; generated HTML marker check; regression unittest run",
+      "tags": [],
+      "recorded_at": "2026-09-26T07:14:26.883Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-9afa4a33",
+      "title": "Fixed CSP blocking inline Genesis theme CSS",
+      "text": "Diagnosed the skeleton HTML: the webview served inline style tags but its Content-Security-Policy allowed inline scripts only, so browsers blocked all CSS. Added style-src self and unsafe-inline to both the real HTTP handler and the testable dispatch response. All 39 web/review/ingest/export tests pass. Restart the running server and reload the page to receive the corrected header.",
+      "source": "sbl_slm/web.py lines 71,108; browser symptom; regression unittest run",
+      "tags": [],
+      "recorded_at": "2026-09-26T07:24:47.779Z",
+      "paths": []
+    },
+    {
+      "id": "KNOWLEDGE-a79dd5e1",
+      "title": "Keep review webview data-only",
+      "text": "The review webview must display only data-review workflow content. Do not include Genesis branding, dashboard shell, Genesis navigation, or Genesis UI copy in the served page. The standalone review workspace remains styled and supports context, target, evidence, phase-A save, and gated reveal.",
+      "source": "User request; sbl_slm/web.py; tests/test_web.py",
+      "tags": [],
+      "recorded_at": "2026-09-26T07:29:50.862Z",
       "paths": []
     }
   ],
@@ -541,7 +623,7 @@
     {
       "id": "IMP-2",
       "outcome": "Persist proposals, context-first reviews, adjudication and model provenance",
-      "state": "active",
+      "state": "done",
       "risk": "medium",
       "owner": null,
       "scope": [
@@ -612,8 +694,14 @@
           "kind": "review",
           "command": "",
           "mandatory": true,
-          "status": "pending",
-          "evidence": null
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-2-independent-review-5556be99-6f05-4179-b10a-6867de201410.json",
+            "hash": "fcd149450f8a1f3d9896cdd6f8a90a9bbaee28b39ade642387c34479040d9fd6",
+            "source_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf",
+            "config_hash": "e3a7876c04862f6d575df8b48e6fc8d69cbe2b55d6a8900bf868000a67ec4bbd",
+            "observed_at": "2026-09-25T08:24:28.710Z"
+          }
         }
       ],
       "next_action": "Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3.",
@@ -622,7 +710,7 @@
       "failures": [],
       "limitations": [],
       "created_at": "2026-09-24T21:15:54.697Z",
-      "updated_at": "2026-09-25T06:41:25.528Z",
+      "updated_at": "2026-09-25T08:24:29.385Z",
       "base_manifest": {
         ".agents/skills/show-me/SKILL.md": "3dec837664d2a6c70afb2ebcc83c9b614ca62977ba570268a47f6c19c30e7102",
         ".agents/skills/show-me/agents/openai.yaml": "881308a7f37a0d210eec66681a45d6db2e4dbdad8935b505929521a8e7cd28a1",
@@ -655,7 +743,7 @@
     {
       "id": "IMP-3",
       "outcome": "Provide loopback-only web review with explicit reviewer attribution",
-      "state": "queued",
+      "state": "done",
       "risk": "medium",
       "owner": null,
       "scope": [
@@ -696,30 +784,73 @@
           "kind": "command",
           "command": "python3 -m unittest -v tests.test_web",
           "mandatory": true,
-          "status": "pending",
-          "evidence": null
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-3-acceptance-f27b1a25-b723-4094-ba5b-5717a79963a2.json",
+            "hash": "e7c2ba0182e3fc4f823eb9f007358fb4379524880dcb4d9c2109047baf5c19f2",
+            "source_hash": "7b7fc891441e142bfc2f9655e42accf2fca20b5cec53234419c7578d6d2530e1",
+            "config_hash": "2d3ceb347c2578b2d4d0771c6692d82bd125384ad78a2bb3a76886570ae17d8d",
+            "observed_at": "2026-09-26T05:09:27.534Z"
+          }
         },
         {
           "id": "independent-review",
           "kind": "review",
           "command": "",
           "mandatory": true,
-          "status": "pending",
-          "evidence": null
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-3-independent-review-e9039c3c-6497-43ba-b2a1-cda49d545372.json",
+            "hash": "f0b19473f9066e2bb249d2fdcc6af0e449b0b9ef12cb3594023e188d9bcd1ed3",
+            "source_hash": "7b7fc891441e142bfc2f9655e42accf2fca20b5cec53234419c7578d6d2530e1",
+            "config_hash": "2d3ceb347c2578b2d4d0771c6692d82bd125384ad78a2bb3a76886570ae17d8d",
+            "observed_at": "2026-09-26T05:11:18.805Z"
+          }
         }
       ],
-      "next_action": "After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.",
-      "blocker": null,
+      "next_action": "Human reviews IMP-3 web handler, dispatch contract and current acceptance evidence, then explicitly approves independent-review; complete IMP-3 through Genesis before beginning IMP-4.",
+      "blocker": "Independent human review pending; executable acceptance passed.",
       "notes": [],
       "failures": [],
       "limitations": [],
       "created_at": "2026-09-24T21:15:54.841Z",
-      "updated_at": "2026-09-24T21:15:54.841Z"
+      "updated_at": "2026-09-26T05:11:19.287Z",
+      "base_manifest": {
+        ".agents/skills/show-me/SKILL.md": "3dec837664d2a6c70afb2ebcc83c9b614ca62977ba570268a47f6c19c30e7102",
+        ".agents/skills/show-me/agents/openai.yaml": "881308a7f37a0d210eec66681a45d6db2e4dbdad8935b505929521a8e7cd28a1",
+        ".gitignore": "d437c3f9abe22df5389580cc95dc3b2fe0e63ecfbebec130a31a626dcbd4d800",
+        "ADRs/001-decision-point-curation-and-review-plain-english.md": "e6d2806483a2857b0727d627ddfb00b6f7212555ed0db029b0ed4557a753e659",
+        "ADRs/001-decision-point-curation-and-review.md": "7c3cc30f74a1370b3f31aa4c94244ff7df98c03d0b0ee123999db07eabc7dc1b",
+        "AGENTS.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "IMPLEMENTATION.md": "75f280f6a849998340ae43aab7131aa5ab8c699708cbc535b50a2d6fbaf3c721",
+        "README.md": "99ec2a5abd630e9f66a63044ccf5acb66cbcc535335e05d96a5ffa544781c687",
+        "SPEC.md": "5db6c0ae7fa44bb41a8562c589ed743b82760e07e22c2ee47e82a753cf68ad59",
+        "checkpoints.md": "4df492b6799507b6e8d94ed3746084eb62e90f934fbf2d8edfe3dee9345b1ba6",
+        "curation/checkpoints/001-inspection.md": "32bcaf3d0513dc1a4ed781739e6e81ab271002135baa029ab00c59bff710e98b",
+        "curation/checkpoints/002-protocol-and-packets.md": "2b8414a221db6f7daf86234787feefc7db28bd93ca0c441059ccf6d756de85f2",
+        "curation/checkpoints/003-review-authorization.md": "ecc32ecb101c7e55cbe381b0107c29cd33b8953bf0d4dad66b9a3c0442f4afa2",
+        "curation/checkpoints/004-workflow-diagram.md": "0569ffb5e373b7b3adbf388862c6cf497ace7d4e592b3786942e8035499d1659",
+        "data/README.txt": "497f13be58b15043ec78edd3533c4c08f2bd8ae8e7cc83316c6991dfb19ec03a",
+        "data/candidates-readable.json": "8397ca111c86bf5ea568dda8d55f940cc70ef27eb4276971a3813fd78686101b",
+        "data/candidates.jsonl": "6721af282b9dc1f60bfb43051f44468af368b1de168d5ae90479c0d7ea57e93c",
+        "data/manifest.jsonl": "fd36a70113b368e77385ba87ca7ca9af3eaf2c2a15faac831cc6131ed5673a0c",
+        "sbl_slm/__init__.py": "492799af87d1309b4f54b0093511fc22904e34c84ab5829bab790a81333e5d8c",
+        "sbl_slm/cli.py": "d07d9b2f8032bc67ca89d636c926d5d936a19f66e8c29ab16ee2a20d6be3a41c",
+        "sbl_slm/ingest.py": "486da13ce72733262c9e3dce0d0535d6af4110e10c957c69dc981283fdbbb460",
+        "sbl_slm/review.py": "31e784c57f7371c8eac89d010c212eac0c6c2cef48788376e7fb17ed03e3c4ae",
+        "sbl_slm/schema.py": "dd1508e852ba58a9f89326856bbb3389307cf4745c328bfc87e20ed2a0c5bd07",
+        "sbl_slm/store.py": "f753b3134cfbd9bcc8c5be6f92e254f738edcfbdf634b908c17d2bdd50d41822",
+        "skills-lock.json": "bdb303dd394ec363bd0539e2ecabb52bfab78a5522849eb6e9641be7a2101b45",
+        "tests/__init__.py": "d41c1b779f9e3227919b73fb66a740dfcbfd999576689d88747dd4cfba241e6a",
+        "tests/test_ingest.py": "56fef32f22f5e22fdfca6d7c5670e363ad5796d79e55fdad57d156c3cd071bb0",
+        "tests/test_review.py": "4757e6de75a74bce63ebb4d9a4c59077c875f1d833ad87d7bdf03cca3c4484a1"
+      }
     },
     {
       "id": "IMP-4",
       "outcome": "Audit approvals and publish deterministic partition-safe JSON releases",
-      "state": "queued",
+      "state": "active",
       "risk": "medium",
       "owner": null,
       "scope": [
@@ -770,8 +901,14 @@
           "kind": "command",
           "command": "python3 -m unittest -v tests.test_export",
           "mandatory": true,
-          "status": "pending",
-          "evidence": null
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/IMP-4-acceptance-57b9435a-0cd6-41bb-bfc7-321c52563684.json",
+            "hash": "24e04d67b626bc47dfe2b35403bc85fdf3e235ed44e7550ea111ac3640dd1a2d",
+            "source_hash": "e1f97bfa50ee6dc8a6c0f76183ae6e739f2ef48fc3bddddf33c77123a837298a",
+            "config_hash": "addbf4314ceefcbaa271cacd5ec65304555c0ff29330732a1aee2827ea142998",
+            "observed_at": "2026-09-26T05:13:01.654Z"
+          }
         },
         {
           "id": "independent-review",
@@ -782,13 +919,46 @@
           "evidence": null
         }
       ],
-      "next_action": "After plan approval and predecessor completion, implement this slice and its fixture checks, run gates, and obtain independent human review.",
-      "blocker": null,
+      "next_action": "Reconcile both approved webview usability corrections with Genesis scope, rerun the IMP-4 gate, and obtain independent review of export plus web behavior.",
+      "blocker": "Webview usability corrections changed completed IMP-3 scope while IMP-4 is active; plan/task reconciliation required before completion.",
       "notes": [],
       "failures": [],
       "limitations": [],
       "created_at": "2026-09-24T21:15:54.958Z",
-      "updated_at": "2026-09-24T21:15:54.958Z"
+      "updated_at": "2026-09-26T06:50:49.150Z",
+      "base_manifest": {
+        ".agents/skills/show-me/SKILL.md": "3dec837664d2a6c70afb2ebcc83c9b614ca62977ba570268a47f6c19c30e7102",
+        ".agents/skills/show-me/agents/openai.yaml": "881308a7f37a0d210eec66681a45d6db2e4dbdad8935b505929521a8e7cd28a1",
+        ".gitignore": "d437c3f9abe22df5389580cc95dc3b2fe0e63ecfbebec130a31a626dcbd4d800",
+        "ADRs/001-decision-point-curation-and-review-plain-english.md": "e6d2806483a2857b0727d627ddfb00b6f7212555ed0db029b0ed4557a753e659",
+        "ADRs/001-decision-point-curation-and-review.md": "7c3cc30f74a1370b3f31aa4c94244ff7df98c03d0b0ee123999db07eabc7dc1b",
+        "AGENTS.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "IMPLEMENTATION.md": "75f280f6a849998340ae43aab7131aa5ab8c699708cbc535b50a2d6fbaf3c721",
+        "README.md": "e181176c9a4ab4fff1767255aa82f5e3b63b7d4e5808de574f3b6c167e0a1512",
+        "SPEC.md": "5db6c0ae7fa44bb41a8562c589ed743b82760e07e22c2ee47e82a753cf68ad59",
+        "checkpoints.md": "4df492b6799507b6e8d94ed3746084eb62e90f934fbf2d8edfe3dee9345b1ba6",
+        "curation/checkpoints/001-inspection.md": "32bcaf3d0513dc1a4ed781739e6e81ab271002135baa029ab00c59bff710e98b",
+        "curation/checkpoints/002-protocol-and-packets.md": "2b8414a221db6f7daf86234787feefc7db28bd93ca0c441059ccf6d756de85f2",
+        "curation/checkpoints/003-review-authorization.md": "ecc32ecb101c7e55cbe381b0107c29cd33b8953bf0d4dad66b9a3c0442f4afa2",
+        "curation/checkpoints/004-workflow-diagram.md": "0569ffb5e373b7b3adbf388862c6cf497ace7d4e592b3786942e8035499d1659",
+        "data/README.txt": "497f13be58b15043ec78edd3533c4c08f2bd8ae8e7cc83316c6991dfb19ec03a",
+        "data/candidates-readable.json": "8397ca111c86bf5ea568dda8d55f940cc70ef27eb4276971a3813fd78686101b",
+        "data/candidates.jsonl": "6721af282b9dc1f60bfb43051f44468af368b1de168d5ae90479c0d7ea57e93c",
+        "data/manifest.jsonl": "fd36a70113b368e77385ba87ca7ca9af3eaf2c2a15faac831cc6131ed5673a0c",
+        "sbl_slm/__init__.py": "492799af87d1309b4f54b0093511fc22904e34c84ab5829bab790a81333e5d8c",
+        "sbl_slm/cli.py": "d07d9b2f8032bc67ca89d636c926d5d936a19f66e8c29ab16ee2a20d6be3a41c",
+        "sbl_slm/ingest.py": "486da13ce72733262c9e3dce0d0535d6af4110e10c957c69dc981283fdbbb460",
+        "sbl_slm/review.py": "31e784c57f7371c8eac89d010c212eac0c6c2cef48788376e7fb17ed03e3c4ae",
+        "sbl_slm/schema.py": "dd1508e852ba58a9f89326856bbb3389307cf4745c328bfc87e20ed2a0c5bd07",
+        "sbl_slm/store.py": "f753b3134cfbd9bcc8c5be6f92e254f738edcfbdf634b908c17d2bdd50d41822",
+        "sbl_slm/web.py": "1bfa2a9e2c09bdd2e0da922f82af8e2308abd50167454e46e32acbe7b90c9776",
+        "skills-lock.json": "bdb303dd394ec363bd0539e2ecabb52bfab78a5522849eb6e9641be7a2101b45",
+        "tests/__init__.py": "d41c1b779f9e3227919b73fb66a740dfcbfd999576689d88747dd4cfba241e6a",
+        "tests/test_ingest.py": "56fef32f22f5e22fdfca6d7c5670e363ad5796d79e55fdad57d156c3cd071bb0",
+        "tests/test_review.py": "4757e6de75a74bce63ebb4d9a4c59077c875f1d833ad87d7bdf03cca3c4484a1",
+        "tests/test_web.py": "cf7c5c821e271c8edaafbbc9c2143ba0e258d62bd2a011e6b6b0b4ed3e6e7865"
+      }
     },
     {
       "id": "IMP-5",
@@ -887,6 +1057,24 @@
       "human": "Aamir",
       "reason": "Carry forward the existing explicit human review approval for unchanged source f3169ceb8e19586d9821ee2addd4cf2dadd27647a8b1c97fef4d9a28ef99cf17 after the user-approved .DS_Store harness fix. Executable tests were rerun successfully; this does not claim a new human review.",
       "revision": null
+    },
+    {
+      "id": "5556be99-6f05-4179-b10a-6867de201410",
+      "at": "2026-09-25T08:24:28.710Z",
+      "action": "approve",
+      "task": "IMP-2",
+      "human": "Aamir",
+      "reason": "User reviewed IMP-2 changes and approved continuing.",
+      "revision": null
+    },
+    {
+      "id": "e9039c3c-6497-43ba-b2a1-cda49d545372",
+      "at": "2026-09-26T05:11:18.805Z",
+      "action": "approve",
+      "task": "IMP-3",
+      "human": "Aamir",
+      "reason": "User stated they reviewed IMP-3.",
+      "revision": null
     }
   ],
   "attempts": [
@@ -961,6 +1149,78 @@
       "cost": null,
       "stop_reason": null,
       "ended_at": "2026-09-25T06:41:16.468Z"
+    },
+    {
+      "id": "2e86a2fe-b48b-4c92-99f9-2b8cfe7951bc",
+      "task": "IMP-3",
+      "kind": "gate",
+      "command": "python3 -m unittest -v tests.test_web",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 25472,
+      "child_pid": 25599,
+      "started_at": "2026-09-26T05:06:44.788Z",
+      "status": "failed",
+      "before_hash": "99163342a232ba484b7e1fafe998d797b3103dc9e74d72bbbb722c8331b53377",
+      "config_hash": "2d3ceb347c2578b2d4d0771c6692d82bd125384ad78a2bb3a76886570ae17d8d",
+      "environment": {
+        "node": "v24.10.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": "command-failed",
+      "ended_at": "2026-09-26T05:06:45.135Z"
+    },
+    {
+      "id": "f27b1a25-b723-4094-ba5b-5717a79963a2",
+      "task": "IMP-3",
+      "kind": "gate",
+      "command": "python3 -m unittest -v tests.test_web",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 26715,
+      "child_pid": 26843,
+      "started_at": "2026-09-26T05:09:27.103Z",
+      "status": "passed",
+      "before_hash": "7b7fc891441e142bfc2f9655e42accf2fca20b5cec53234419c7578d6d2530e1",
+      "config_hash": "2d3ceb347c2578b2d4d0771c6692d82bd125384ad78a2bb3a76886570ae17d8d",
+      "environment": {
+        "node": "v24.10.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-26T05:09:27.534Z"
+    },
+    {
+      "id": "57b9435a-0cd6-41bb-bfc7-321c52563684",
+      "task": "IMP-4",
+      "kind": "gate",
+      "command": "python3 -m unittest -v tests.test_export",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 28614,
+      "child_pid": 28769,
+      "started_at": "2026-09-26T05:13:01.225Z",
+      "status": "passed",
+      "before_hash": "e1f97bfa50ee6dc8a6c0f76183ae6e739f2ef48fc3bddddf33c77123a837298a",
+      "config_hash": "addbf4314ceefcbaa271cacd5ec65304555c0ff29330732a1aee2827ea142998",
+      "environment": {
+        "node": "v24.10.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-26T05:13:01.654Z"
     }
   ],
   "authorizations": [],
@@ -984,14 +1244,14 @@
     }
   },
   "checkpoint": {
-    "at": "2026-09-25T06:41:25.786Z",
+    "at": "2026-09-26T07:31:13.670Z",
     "revision": {
-      "commit": null,
-      "dirty": null,
-      "source_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf"
+      "commit": "542f2dc89af78fd6742a66faf26ac60f93157d77",
+      "dirty": true,
+      "source_hash": "1a9e724d4a61e685f3416d9c6ec3ac52fe7dfc60a54a428b9717de9280be2d17"
     },
-    "active_task": "IMP-2",
-    "next_action": "Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3."
+    "active_task": "IMP-4",
+    "next_action": "Reconcile both approved webview usability corrections with Genesis scope, rerun the IMP-4 gate, and obtain independent review of export plus web behavior."
   },
   "legacy": null
 }

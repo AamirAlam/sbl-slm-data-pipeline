@@ -1,0 +1,13 @@
+{
+  "task": "IMP-2",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "5556be99-6f05-4179-b10a-6867de201410",
+  "human": "Aamir",
+  "reason": "User reviewed IMP-2 changes and approved continuing.",
+  "observed_at": "2026-09-25T08:24:28.710Z",
+  "source_hash": "e83b10ca4e88814b741ca8b338e512492d73f8c29df5e4ac795768ad0b8504bf",
+  "config_hash": "e3a7876c04862f6d575df8b48e6fc8d69cbe2b55d6a8900bf868000a67ec4bbd",
+  "reviewed_proofs": "d585f5438cd75b16ce136240bb56defb722d348c244d7182912998113f625c3a",
+  "hash": "fcd149450f8a1f3d9896cdd6f8a90a9bbaee28b39ade642387c34479040d9fd6"
+}

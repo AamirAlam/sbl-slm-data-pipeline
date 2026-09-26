@@ -4,6 +4,13 @@ IMP-1 provides read-only ingestion and deterministic, unreviewed phase-A packets
 The review database, web interface, audit/export and recovery are later tasks.
 No model calls, labels or accepted training examples are produced by ingestion.
 
+IMP-2 adds `sbl_slm.review.Review` and private SQLite state under `.local/`.
+IMP-3 adds `sbl_slm.web.serve(root)`, which binds only to loopback. The browser
+must save a context-first phase-A target before the observed response can be
+revealed. Mutations require a CSRF token and a self-declared reviewer name;
+identity is not authenticated. Use the library or the CLI for now; a command to
+launch the server will be added with the remaining operator workflow.
+
 ## Run
 
 ```sh

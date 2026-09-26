@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "sbl-slm",
-  "revision": null,
-  "sourceHash": "c6a1d2212e0883b2b2512375d33ef445082ee09f19f987a982f7f683b4c32da5",
+  "revision": "542f2dc89af78fd6742a66faf26ac60f93157d77",
+  "sourceHash": "648a62089c183306bcab9257e68cf659917850830dd2db4bd447cddff0172e36",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -20,6 +20,16 @@
       "contentHash": "3e25f6189e985b7f2da440b03beb62d2d7fd4fff017c7a58fd97c13dcf612148"
     },
     {
+      "id": "file:sbl_slm/audit.py",
+      "type": "file",
+      "label": "sbl_slm/audit.py",
+      "path": "sbl_slm/audit.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "ef41dfe93040368909ead485f3e705871f683035e14da4c5acd40473a685d074"
+    },
+    {
       "id": "file:sbl_slm/cli.py",
       "type": "file",
       "label": "sbl_slm/cli.py",
@@ -28,6 +38,16 @@
       "confidence": 1,
       "extractor": "filesystem",
       "contentHash": "28b2f79859ca43c544a374ac3122fde2786b9d8db7ac66de951f61c1e6c8ae99"
+    },
+    {
+      "id": "file:sbl_slm/export.py",
+      "type": "file",
+      "label": "sbl_slm/export.py",
+      "path": "sbl_slm/export.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "31ad8ecf87277ce7f4f3c7ba148d65db12499c85c3b3645128c9f795de286a60"
     },
     {
       "id": "file:sbl_slm/ingest.py",
@@ -70,6 +90,16 @@
       "contentHash": "aa237731eedb97fb6bfff2f1b2de86c94dbe55af9d380f5cac179390de4d9f6d"
     },
     {
+      "id": "file:sbl_slm/web.py",
+      "type": "file",
+      "label": "sbl_slm/web.py",
+      "path": "sbl_slm/web.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "9a09733f31c0ab7d27b928064b2d2f26ab2bfe1cbb46508318db85bb21c74c52"
+    },
+    {
       "id": "file:tests/__init__.py",
       "type": "file",
       "label": "tests/__init__.py",
@@ -78,6 +108,16 @@
       "confidence": 1,
       "extractor": "filesystem",
       "contentHash": "9e160f149b8132308f09fd90f3a7c28fbbc393055ceef74712d179946971050c"
+    },
+    {
+      "id": "file:tests/test_export.py",
+      "type": "file",
+      "label": "tests/test_export.py",
+      "path": "tests/test_export.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "142d0ab66389b9e722cf5859231126f7fc437315feb9035e76026076bf21cab2"
     },
     {
       "id": "file:tests/test_ingest.py",
@@ -98,6 +138,16 @@
       "confidence": 1,
       "extractor": "filesystem",
       "contentHash": "a2b31a1245b652f1e142e3bdfcb206bce29aa99c5928457fc311d963f03b1a22"
+    },
+    {
+      "id": "file:tests/test_web.py",
+      "type": "file",
+      "label": "tests/test_web.py",
+      "path": "tests/test_web.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "ccc5e3d2cb85d44cf1c7426edcd0655557981399942ec9dee50d9e85160e9107"
     },
     {
       "id": "runtime:python:argparse",
@@ -145,6 +195,24 @@
       "contentHash": "77c0573ae65199003c1e54971c9c5faaa5fb7b2bf90715c1741b45eca6560e6c"
     },
     {
+      "id": "runtime:python:html",
+      "type": "runtime",
+      "label": "html",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "0265d35d91935c442240886ecb50984268bbd3e33f7f40d81a178bf1ed265e7f"
+    },
+    {
+      "id": "runtime:python:http.server",
+      "type": "runtime",
+      "label": "http.server",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "97b0ab388a84eca095b03852ae65a6785b41364133ebbf5b5e14963c69104aaa"
+    },
+    {
       "id": "runtime:python:io",
       "type": "runtime",
       "label": "io",
@@ -161,6 +229,15 @@
       "confidence": 0.85,
       "extractor": "standard-library",
       "contentHash": "6f37f6a05e2fd9821d46f9c71a4ae5642cc4a8392959110f34947e4fecc47d62"
+    },
+    {
+      "id": "runtime:python:math",
+      "type": "runtime",
+      "label": "math",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "24b689b133df3f4354e50558682015a4c55467ae80f75281a110485700845fbf"
     },
     {
       "id": "runtime:python:os",
@@ -181,6 +258,15 @@
       "contentHash": "f80e30cf02d84c10bc9ec466758fee39c984c5b41f4d5ab280e2be46cd1c3c2a"
     },
     {
+      "id": "runtime:python:random",
+      "type": "runtime",
+      "label": "random",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "b29e818eeed4b48e562dbbd57d9e373fa69711299d0fdbf4dc8977526793b3d9"
+    },
+    {
       "id": "runtime:python:re",
       "type": "runtime",
       "label": "re",
@@ -188,6 +274,15 @@
       "confidence": 0.85,
       "extractor": "standard-library",
       "contentHash": "7e94b3e53ed926a0862ab420950da1727eead16cbd6a34908b9d475846791a02"
+    },
+    {
+      "id": "runtime:python:secrets",
+      "type": "runtime",
+      "label": "secrets",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "e1619bc3c3b35b1f9074d2a05b64f8e22227cae69557c0a8ac30f43e42abc23b"
     },
     {
       "id": "runtime:python:sqlite3",
@@ -217,6 +312,24 @@
       "contentHash": "dd9fd267fbfe9cf999a4f0db8925cc25d637fb255b4430913b2a99b6abcddc09"
     },
     {
+      "id": "runtime:python:threading",
+      "type": "runtime",
+      "label": "threading",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "215ed8c5ba8f40533d2453e1761827f0c56f197e01be05dd16fd0c0a10c2449f"
+    },
+    {
+      "id": "runtime:python:types",
+      "type": "runtime",
+      "label": "types",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "d3e5c5e214f55584cefbd4e90f3d2455caaa34f2066b3ad8a5821a04e15d8c09"
+    },
+    {
       "id": "runtime:python:unittest",
       "type": "runtime",
       "label": "unittest",
@@ -224,6 +337,39 @@
       "confidence": 0.85,
       "extractor": "standard-library",
       "contentHash": "f0e2572d8c3be1dcf3b0b7252af721f55a41abf4434442552c162c8190e1df05"
+    },
+    {
+      "id": "runtime:python:urllib.parse",
+      "type": "runtime",
+      "label": "urllib.parse",
+      "language": "python",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "1723d51a355f4e8cebe6794a19c3be8ef1b234daa4e498c9f77e1fc0ad8e4c91"
+    },
+    {
+      "id": "symbol:sbl_slm/audit.py#function:record",
+      "type": "symbol",
+      "kind": "function",
+      "name": "record",
+      "label": "record",
+      "path": "sbl_slm/audit.py",
+      "line": 17,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "207e69a5d1a5faad00ac4845dfa81a561a31ac4eae6f944a4110b0ae7965a59d"
+    },
+    {
+      "id": "symbol:sbl_slm/audit.py#function:select",
+      "type": "symbol",
+      "kind": "function",
+      "name": "select",
+      "label": "select",
+      "path": "sbl_slm/audit.py",
+      "line": 8,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "3b321d30b60a69c0e9e03766b6116ba7200ec390ee04788688b01dda1198525e"
     },
     {
       "id": "symbol:sbl_slm/cli.py#function:main",
@@ -236,6 +382,114 @@
       "confidence": 1,
       "extractor": "python-stdlib-ast",
       "contentHash": "f583c61a40c09d3bfca9b3e6ef3e28a4f4dfaced58f9b895d0d76c0d77a8dd4c"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#class:Exporter",
+      "type": "symbol",
+      "kind": "class",
+      "name": "Exporter",
+      "label": "Exporter",
+      "path": "sbl_slm/export.py",
+      "line": 6,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "f80af7efa9f4d94afa43133d55b26d246ac160599036a272b70be68b41126c11"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter.__init__",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter.__init__",
+      "label": "Exporter.__init__",
+      "path": "sbl_slm/export.py",
+      "line": 7,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "727e9c7a3d3d8e77e1e39ca001a7349a2504ca2bb1955933b8c69bb913721ebe"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter._accepted",
+      "label": "Exporter._accepted",
+      "path": "sbl_slm/export.py",
+      "line": 12,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "3a7aaf02ea28f82e39f19884225e5f00efac55933e20067656a1c9299ea4ec83"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter._audit_refs",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter._audit_refs",
+      "label": "Exporter._audit_refs",
+      "path": "sbl_slm/export.py",
+      "line": 26,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "ae17bb300f3b8f3b931483a7d6752e8253ed355b82e400d0eda79f707d1957c0"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter._data_use_allowed",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter._data_use_allowed",
+      "label": "Exporter._data_use_allowed",
+      "path": "sbl_slm/export.py",
+      "line": 98,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "a9ff99bf913fffbf72c6f008e8d969246f3fb75b2671b89455879e56431249e8"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter._record",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter._record",
+      "label": "Exporter._record",
+      "path": "sbl_slm/export.py",
+      "line": 21,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "0fe8e02ee819da8aa908cb952ef4d44a55f97409da60914e791051428805eb92"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter.audit",
+      "label": "Exporter.audit",
+      "path": "sbl_slm/export.py",
+      "line": 49,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "5d51e516da0b213d03725abad7997e6475c60760f94ca9f9e42144f3b785046d"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter.build",
+      "label": "Exporter.build",
+      "path": "sbl_slm/export.py",
+      "line": 59,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "f6d5d79f41890d7ec6e67913d4e4256035b236cf11a78601828c395fbda8e760"
+    },
+    {
+      "id": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Exporter.freeze_audit",
+      "label": "Exporter.freeze_audit",
+      "path": "sbl_slm/export.py",
+      "line": 37,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "4987a60b8ec9158acb28d765cda09d0a61e7656f65fc17c1ed30d33bbe1ab9a5"
     },
     {
       "id": "symbol:sbl_slm/ingest.py#function:decode",
@@ -874,6 +1128,198 @@
       "contentHash": "7570bd2018447a05d9bc8ec87588c842fc22df31fcb59bc425ba835a9021c86c"
     },
     {
+      "id": "symbol:sbl_slm/web.py#class:ReviewHandler",
+      "type": "symbol",
+      "kind": "class",
+      "name": "ReviewHandler",
+      "label": "ReviewHandler",
+      "path": "sbl_slm/web.py",
+      "line": 25,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "71e9ea792650c10ae623b78c740f5a0cc1f7cfe0695687604676780de9f6c401"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#class:ReviewServer",
+      "type": "symbol",
+      "kind": "class",
+      "name": "ReviewServer",
+      "label": "ReviewServer",
+      "path": "sbl_slm/web.py",
+      "line": 112,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "4c2f1158aeda24fd9d9e3388160bcefac42e5de8e51019fb2fb8d7be2d5fc5cc"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:dispatch",
+      "type": "symbol",
+      "kind": "function",
+      "name": "dispatch",
+      "label": "dispatch",
+      "path": "sbl_slm/web.py",
+      "line": 84,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "19fbb834ecf4d0edc38dcbaa842ba5d6104a297072178c7ef41884b66e7f1b82"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:page",
+      "type": "symbol",
+      "kind": "function",
+      "name": "page",
+      "label": "page",
+      "path": "sbl_slm/web.py",
+      "line": 12,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "dbd363d9828e755e781c00c2e29f08436cd0daccacc523b6e9ab963e4c711274"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:ReviewHandler._body",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ReviewHandler._body",
+      "label": "ReviewHandler._body",
+      "path": "sbl_slm/web.py",
+      "line": 36,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "45526028802dce6d69d1949dc715ca0ac12c06d9ff0359636339761708fb60de"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:ReviewHandler._json",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ReviewHandler._json",
+      "label": "ReviewHandler._json",
+      "path": "sbl_slm/web.py",
+      "line": 28,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "fcac0d54f22a697f010eeee277bac177c43e61dac0f32c33e593831691984648"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ReviewHandler.do_GET",
+      "label": "ReviewHandler.do_GET",
+      "path": "sbl_slm/web.py",
+      "line": 44,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "ee63b08d0e4cb7fdde40f198a9c1ee35074c9948d073319babb2657718ec5779"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ReviewHandler.do_POST",
+      "label": "ReviewHandler.do_POST",
+      "path": "sbl_slm/web.py",
+      "line": 63,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "0eca6f873a1ccfdecc1c73a4b41c92395a2130463c7f711accc3b16129f64cce"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:ReviewHandler.log_message",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ReviewHandler.log_message",
+      "label": "ReviewHandler.log_message",
+      "path": "sbl_slm/web.py",
+      "line": 80,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "83da1238d57ca86e35e3d65a9c37a92d96ee54246c96a9d90feff3071803620d"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:ReviewServer.__init__",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ReviewServer.__init__",
+      "label": "ReviewServer.__init__",
+      "path": "sbl_slm/web.py",
+      "line": 115,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "3bd6373731d94c9b3315086817510f5bcdbcf5cf6834f651f194114e21e7e4f9"
+    },
+    {
+      "id": "symbol:sbl_slm/web.py#function:serve",
+      "type": "symbol",
+      "kind": "function",
+      "name": "serve",
+      "label": "serve",
+      "path": "sbl_slm/web.py",
+      "line": 122,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "f3660fed635198a321bfd086a4a02578b21d8a3129bae7d98f1c4e07f2bfdcfb"
+    },
+    {
+      "id": "symbol:tests/test_export.py#class:ExportTests",
+      "type": "symbol",
+      "kind": "class",
+      "name": "ExportTests",
+      "label": "ExportTests",
+      "path": "tests/test_export.py",
+      "line": 15,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "55bb3e3bdc92767969c0c50e8a8c440d48b1433fe357f0a607b98513b99eb7a8"
+    },
+    {
+      "id": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ExportTests.setUp",
+      "label": "ExportTests.setUp",
+      "path": "tests/test_export.py",
+      "line": 16,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "b0043e385d58b077a1ab237138a569b7f99185bff241e16e7c9bf0c2fb45c7b0"
+    },
+    {
+      "id": "symbol:tests/test_export.py#function:ExportTests.test_audit_rounding_and_reproducibility",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ExportTests.test_audit_rounding_and_reproducibility",
+      "label": "ExportTests.test_audit_rounding_and_reproducibility",
+      "path": "tests/test_export.py",
+      "line": 38,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "568419ce2737c68e09d584d1a36f4f82b4c71bc6585ecc6476d2c1cdb84487c2"
+    },
+    {
+      "id": "symbol:tests/test_export.py#function:ExportTests.test_permission_boundary_and_exclusions",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ExportTests.test_permission_boundary_and_exclusions",
+      "label": "ExportTests.test_permission_boundary_and_exclusions",
+      "path": "tests/test_export.py",
+      "line": 50,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "0a19ccb29376b762a68bd148941c1b341ae4cd29d61db5b5530f86f095292364"
+    },
+    {
+      "id": "symbol:tests/test_export.py#function:ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "label": "ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "path": "tests/test_export.py",
+      "line": 58,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "5cd308fdfc1f3166b8d20275c67912000db5ad16d9074d0a66867bbb1c0ea6c3"
+    },
+    {
       "id": "symbol:tests/test_ingest.py#class:IngestionTests",
       "type": "symbol",
       "kind": "class",
@@ -1436,9 +1882,138 @@
       "confidence": 1,
       "extractor": "python-stdlib-ast",
       "contentHash": "095ea2cdbb7a0282fb12a5d3302cb504f334f5c27f2d948162a795b7e627712c"
+    },
+    {
+      "id": "symbol:tests/test_web.py#class:WebTests",
+      "type": "symbol",
+      "kind": "class",
+      "name": "WebTests",
+      "label": "WebTests",
+      "path": "tests/test_web.py",
+      "line": 16,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "572ef36f89df836976d9fa6bb3adfe26c86a528a872c515548018f252c68e7c0"
+    },
+    {
+      "id": "symbol:tests/test_web.py#function:WebTests.close",
+      "type": "symbol",
+      "kind": "function",
+      "name": "WebTests.close",
+      "label": "WebTests.close",
+      "path": "tests/test_web.py",
+      "line": 35,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "d32718ca4858265f6e67ca7a8e7a3c8249b39f99ec9e10aff51e0b65b0171893"
+    },
+    {
+      "id": "symbol:tests/test_web.py#function:WebTests.request",
+      "type": "symbol",
+      "kind": "function",
+      "name": "WebTests.request",
+      "label": "WebTests.request",
+      "path": "tests/test_web.py",
+      "line": 38,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "ebc74cfb84d53aa198ca338ab6065dced173a0e88f4717f671d0c075b6021ff2"
+    },
+    {
+      "id": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "type": "symbol",
+      "kind": "function",
+      "name": "WebTests.setUp",
+      "label": "WebTests.setUp",
+      "path": "tests/test_web.py",
+      "line": 17,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "1e7bcac4f8d7eeb669b114a369215cd97c888c9c1187dbd7e6c72410dfdf37c2"
+    },
+    {
+      "id": "symbol:tests/test_web.py#function:WebTests.test_csrf_host_and_phase_rules",
+      "type": "symbol",
+      "kind": "function",
+      "name": "WebTests.test_csrf_host_and_phase_rules",
+      "label": "WebTests.test_csrf_host_and_phase_rules",
+      "path": "tests/test_web.py",
+      "line": 67,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "0aa9305d5b84502b5a50e79e0e013356f3449d6ca5fdf384b8674560a37ed240"
+    },
+    {
+      "id": "symbol:tests/test_web.py#function:WebTests.test_loopback_review_hides_response_until_phase_a",
+      "type": "symbol",
+      "kind": "function",
+      "name": "WebTests.test_loopback_review_hides_response_until_phase_a",
+      "label": "WebTests.test_loopback_review_hides_response_until_phase_a",
+      "path": "tests/test_web.py",
+      "line": 50,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "59acc3b41ed0c93a00dbf8650351d0e6e41cb9507e555d55af9f25d583b61691"
+    },
+    {
+      "id": "symbol:tests/test_web.py#function:WebTests.test_unknown_route_and_xss_escaping",
+      "type": "symbol",
+      "kind": "function",
+      "name": "WebTests.test_unknown_route_and_xss_escaping",
+      "label": "WebTests.test_unknown_route_and_xss_escaping",
+      "path": "tests/test_web.py",
+      "line": 77,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast",
+      "contentHash": "80444a246d6cd35e7c9040543ac0dfb5e23d9ef8328486802c06912bd14ee3e3"
     }
   ],
   "edges": [
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/audit.py#function:record",
+      "target": "symbol:sbl_slm/audit.py#function:select",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/audit.py#function:record",
+      "target": "symbol:sbl_slm/store.py#function:Store.append",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.append"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/audit.py#function:record",
+      "target": "symbol:sbl_slm/store.py#function:Store.put",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.put"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/audit.py#function:record",
+      "target": "symbol:sbl_slm/store.py#function:Store.transaction",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.transaction"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
     {
       "type": "calls",
       "source": "symbol:sbl_slm/cli.py#function:main",
@@ -1540,6 +2115,318 @@
       "candidates": [
         "symbol:sbl_slm/store.py#function:Store.version",
         "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "target": "symbol:sbl_slm/store.py#function:Store.events",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.events"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._audit_refs",
+      "target": "symbol:sbl_slm/store.py#function:Store.events",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.events"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._audit_refs",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._data_use_allowed",
+      "target": "symbol:sbl_slm/store.py#function:Store.events",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.events"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._data_use_allowed",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter._record",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "target": "symbol:sbl_slm/schema.py#function:require",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "target": "symbol:sbl_slm/store.py#function:Store.append",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.append"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "target": "symbol:sbl_slm/store.py#function:Store.put",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.put"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "target": "symbol:sbl_slm/store.py#function:Store.transaction",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.transaction"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._audit_refs",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._data_use_allowed",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._record",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/review.py#function:Review._fresh",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review._fresh"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/schema.py#class:ValidationError",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/schema.py#function:canonical",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/schema.py#function:content_hash",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/schema.py#function:require",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/store.py#function:Store.append",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.append"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "target": "symbol:sbl_slm/store.py#function:Store.transaction",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.transaction"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "target": "symbol:sbl_slm/audit.py#function:select",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "target": "symbol:sbl_slm/store.py#function:Store.append",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.append"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "target": "symbol:sbl_slm/store.py#function:Store.put",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.put"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "target": "symbol:sbl_slm/store.py#function:Store.transaction",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.transaction"
       ],
       "resolved": false,
       "confidence": 0.3,
@@ -3116,6 +4003,18 @@
     },
     {
       "type": "calls",
+      "source": "symbol:sbl_slm/store.py#function:Store.__init__",
+      "target": "symbol:tests/test_web.py#function:WebTests.close",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_web.py#function:WebTests.close"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:sbl_slm/store.py#function:Store.append",
       "target": "symbol:sbl_slm/ingest.py#function:decode",
       "tier": "ambiguous",
@@ -3257,6 +4156,18 @@
     },
     {
       "type": "calls",
+      "source": "symbol:sbl_slm/store.py#function:Store.transaction",
+      "target": "symbol:tests/test_web.py#function:WebTests.close",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_web.py#function:WebTests.close"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:sbl_slm/store.py#function:Store.verify",
       "target": "symbol:sbl_slm/schema.py#function:content_hash",
       "tier": "proven",
@@ -3289,6 +4200,584 @@
       "tier": "proven",
       "resolved": true,
       "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:dispatch",
+      "target": "symbol:sbl_slm/review.py#function:Review.phase_a",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.phase_a"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:dispatch",
+      "target": "symbol:sbl_slm/review.py#function:Review.view",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.view"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:dispatch",
+      "target": "symbol:sbl_slm/schema.py#function:require",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:dispatch",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:dispatch",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:dispatch",
+      "target": "symbol:sbl_slm/web.py#function:page",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:page",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler._body",
+      "target": "symbol:sbl_slm/schema.py#function:require",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler._body",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler._json",
+      "target": "symbol:tests/test_ingest.py#function:IngestionTests.write",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_ingest.py#function:IngestionTests.write"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "target": "symbol:sbl_slm/review.py#function:Review.view",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.view"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "target": "symbol:sbl_slm/web.py#function:page",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler._json",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "target": "symbol:tests/test_ingest.py#function:IngestionTests.write",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_ingest.py#function:IngestionTests.write"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "target": "symbol:sbl_slm/review.py#function:Review.phase_a",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.phase_a"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "target": "symbol:sbl_slm/review.py#function:Review.view",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.view"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "target": "symbol:sbl_slm/store.py#function:Store.get",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.get"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler._body",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler._json",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewServer.__init__",
+      "target": "symbol:sbl_slm/review.py#class:Review",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewServer.__init__",
+      "target": "symbol:sbl_slm/schema.py#function:require",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:ReviewServer.__init__",
+      "target": "symbol:sbl_slm/web.py#function:ReviewServer.__init__",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:sbl_slm/web.py#function:serve",
+      "target": "symbol:sbl_slm/web.py#class:ReviewServer",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/export.py#class:Exporter",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/ingest.py#function:snapshot",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#class:Review",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.decide",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.decide"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.evidence",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.evidence",
+        "symbol:tests/test_review.py#function:ReviewTests.evidence"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.initialize",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.initialize"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.phase_a",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.phase_a"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.propose",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.propose",
+        "symbol:tests/test_review.py#function:ReviewTests.propose"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.review",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.review",
+        "symbol:tests/test_review.py#function:ReviewTests.review"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.sync",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.sync"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.view",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.view"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/schema.py#function:canonical",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/schema.py#function:sha",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "target": "symbol:tests/test_ingest.py#function:candidate",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_audit_rounding_and_reproducibility",
+      "target": "symbol:sbl_slm/audit.py#function:select",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_audit_rounding_and_reproducibility",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/export.py#function:Exporter.build"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_audit_rounding_and_reproducibility",
+      "target": "symbol:sbl_slm/ingest.py#function:decode",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/ingest.py#function:decode"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_audit_rounding_and_reproducibility",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_permission_boundary_and_exclusions",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/export.py#function:Exporter.build"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_permission_boundary_and_exclusions",
+      "target": "symbol:sbl_slm/review.py#function:Review.evidence",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.evidence",
+        "symbol:tests/test_review.py#function:ReviewTests.evidence"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_permission_boundary_and_exclusions",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/export.py#function:Exporter.build"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "target": "symbol:sbl_slm/ingest.py#function:snapshot",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_export.py#function:ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "target": "symbol:tests/test_ingest.py#function:IngestionTests.write",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_ingest.py#function:IngestionTests.write"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
       "extractor": "python-stdlib-ast-calls"
     },
     {
@@ -4184,6 +5673,18 @@
     },
     {
       "type": "calls",
+      "source": "symbol:tests/test_review.py#function:ReviewTests.test_deleted_reference_detected",
+      "target": "symbol:tests/test_web.py#function:WebTests.close",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_web.py#function:WebTests.close"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:tests/test_review.py#function:ReviewTests.test_disagreement_requires_owner_adjudication",
       "target": "symbol:sbl_slm/review.py#function:Review._reviews",
       "tier": "ambiguous",
@@ -4381,6 +5882,18 @@
       "tier": "proven",
       "resolved": true,
       "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_review.py#function:ReviewTests.test_journal_truncation_detected",
+      "target": "symbol:tests/test_web.py#function:WebTests.close",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_web.py#function:WebTests.close"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
       "extractor": "python-stdlib-ast-calls"
     },
     {
@@ -4712,6 +6225,18 @@
     },
     {
       "type": "calls",
+      "source": "symbol:tests/test_review.py#function:ReviewTests.test_tampered_objects_and_missing_references",
+      "target": "symbol:tests/test_web.py#function:WebTests.close",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:tests/test_web.py#function:WebTests.close"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:tests/test_review.py#function:ReviewTests.test_uncertain_capture_and_live_calls_blocked",
       "target": "symbol:sbl_slm/review.py#function:Review.call_model",
       "tier": "ambiguous",
@@ -4921,10 +6446,262 @@
       "extractor": "python-stdlib-ast-calls"
     },
     {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.request",
+      "target": "symbol:sbl_slm/web.py#function:dispatch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/ingest.py#function:snapshot",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/review.py#class:Review",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.evidence",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.evidence",
+        "symbol:tests/test_review.py#function:ReviewTests.evidence"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.initialize",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.initialize"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.propose",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.propose",
+        "symbol:tests/test_review.py#function:ReviewTests.propose"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/review.py#function:Review.sync",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/review.py#function:Review.sync"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/schema.py#function:canonical",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/schema.py#function:sha",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:sbl_slm/store.py#function:Store.version",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:sbl_slm/store.py#function:Store.version",
+        "symbol:tests/test_review.py#function:ReviewTests.version"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "target": "symbol:tests/test_ingest.py#function:candidate",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.test_csrf_host_and_phase_rules",
+      "target": "symbol:tests/test_web.py#function:WebTests.request",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.test_loopback_review_hides_response_until_phase_a",
+      "target": "symbol:sbl_slm/ingest.py#function:snapshot",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.test_loopback_review_hides_response_until_phase_a",
+      "target": "symbol:tests/test_web.py#function:WebTests.request",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:tests/test_web.py#function:WebTests.test_unknown_route_and_xss_escaping",
+      "target": "symbol:tests/test_web.py#function:WebTests.request",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast-calls"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/audit.py",
+      "target": "symbol:sbl_slm/audit.py#function:record",
+      "line": 17,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/audit.py",
+      "target": "symbol:sbl_slm/audit.py#function:select",
+      "line": 8,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
       "type": "defines",
       "source": "file:sbl_slm/cli.py",
       "target": "symbol:sbl_slm/cli.py#function:main",
       "line": 16,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#class:Exporter",
+      "line": 6,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.__init__",
+      "line": 7,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._accepted",
+      "line": 12,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._audit_refs",
+      "line": 26,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._data_use_allowed",
+      "line": 98,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter._record",
+      "line": 21,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.audit",
+      "line": 49,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.build",
+      "line": 59,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/export.py",
+      "target": "symbol:sbl_slm/export.py#function:Exporter.freeze_audit",
+      "line": 37,
       "resolved": true,
       "confidence": 1,
       "extractor": "python-stdlib-ast"
@@ -5408,6 +7185,150 @@
     },
     {
       "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#class:ReviewHandler",
+      "line": 25,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#class:ReviewServer",
+      "line": 112,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:dispatch",
+      "line": 84,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:page",
+      "line": 12,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler._body",
+      "line": 36,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler._json",
+      "line": 28,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler.do_GET",
+      "line": 44,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler.do_POST",
+      "line": 63,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:ReviewHandler.log_message",
+      "line": 80,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:ReviewServer.__init__",
+      "line": 115,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:sbl_slm/web.py",
+      "target": "symbol:sbl_slm/web.py#function:serve",
+      "line": 122,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_export.py",
+      "target": "symbol:tests/test_export.py#class:ExportTests",
+      "line": 15,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_export.py",
+      "target": "symbol:tests/test_export.py#function:ExportTests.setUp",
+      "line": 16,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_export.py",
+      "target": "symbol:tests/test_export.py#function:ExportTests.test_audit_rounding_and_reproducibility",
+      "line": 38,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_export.py",
+      "target": "symbol:tests/test_export.py#function:ExportTests.test_permission_boundary_and_exclusions",
+      "line": 50,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_export.py",
+      "target": "symbol:tests/test_export.py#function:ExportTests.test_stale_approval_excluded_and_source_immutable",
+      "line": 58,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
       "source": "file:tests/test_ingest.py",
       "target": "symbol:tests/test_ingest.py#class:IngestionTests",
       "line": 29,
@@ -5830,6 +7751,99 @@
       "extractor": "python-stdlib-ast"
     },
     {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#class:WebTests",
+      "line": 16,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#function:WebTests.close",
+      "line": 35,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#function:WebTests.request",
+      "line": 38,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#function:WebTests.setUp",
+      "line": 17,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#function:WebTests.test_csrf_host_and_phase_rules",
+      "line": 67,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#function:WebTests.test_loopback_review_hides_response_until_phase_a",
+      "line": 50,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "defines",
+      "source": "file:tests/test_web.py",
+      "target": "symbol:tests/test_web.py#function:WebTests.test_unknown_route_and_xss_escaping",
+      "line": 77,
+      "resolved": true,
+      "confidence": 1,
+      "extractor": "python-stdlib-ast"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/audit.py",
+      "target": "file:sbl_slm/schema.py",
+      "specifier": ".schema",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/audit.py",
+      "target": "runtime:python:math",
+      "specifier": "math",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/audit.py",
+      "target": "runtime:python:random",
+      "specifier": "random",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
       "type": "imports",
       "source": "file:sbl_slm/cli.py",
       "target": "file:sbl_slm/ingest.py",
@@ -5905,6 +7919,26 @@
       "target": "runtime:python:sys",
       "specifier": "sys",
       "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/export.py",
+      "target": "file:sbl_slm/audit.py",
+      "specifier": ".audit",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/export.py",
+      "target": "file:sbl_slm/schema.py",
+      "specifier": ".schema",
+      "line": 3,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "python-imports"
@@ -6074,6 +8108,186 @@
       "source": "file:sbl_slm/store.py",
       "target": "runtime:python:sqlite3",
       "specifier": "sqlite3",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "file:sbl_slm/review.py",
+      "specifier": ".review",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "file:sbl_slm/schema.py",
+      "specifier": ".schema",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "runtime:python:html",
+      "specifier": "html",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "runtime:python:http.server",
+      "specifier": "http.server",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "runtime:python:secrets",
+      "specifier": "secrets",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:sbl_slm/web.py",
+      "target": "runtime:python:urllib.parse",
+      "specifier": "urllib.parse",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "file:sbl_slm/audit.py",
+      "specifier": "sbl_slm.audit",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "file:sbl_slm/export.py",
+      "specifier": "sbl_slm.export",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "file:sbl_slm/ingest.py",
+      "specifier": "sbl_slm.ingest",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "file:sbl_slm/review.py",
+      "specifier": "sbl_slm.review",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "file:sbl_slm/schema.py",
+      "specifier": "sbl_slm.schema",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "file:tests/test_ingest.py",
+      "specifier": "tests.test_ingest",
+      "line": 12,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "runtime:python:copy",
+      "specifier": "copy",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "runtime:python:pathlib",
+      "specifier": "pathlib",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "runtime:python:tempfile",
+      "specifier": "tempfile",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_export.py",
+      "target": "runtime:python:unittest",
+      "specifier": "unittest",
       "line": 4,
       "resolved": true,
       "confidence": 0.85,
@@ -6308,10 +8522,130 @@
       "resolved": true,
       "confidence": 0.85,
       "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "file:sbl_slm/ingest.py",
+      "specifier": "sbl_slm.ingest",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "file:sbl_slm/review.py",
+      "specifier": "sbl_slm.review",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "file:sbl_slm/schema.py",
+      "specifier": "sbl_slm.schema",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "file:sbl_slm/web.py",
+      "specifier": "sbl_slm.web",
+      "line": 12,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "file:tests/test_ingest.py",
+      "specifier": "tests.test_ingest",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:json",
+      "specifier": "json",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:pathlib",
+      "specifier": "pathlib",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:secrets",
+      "specifier": "secrets",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:tempfile",
+      "specifier": "tempfile",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:threading",
+      "specifier": "threading",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:types",
+      "specifier": "types",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:tests/test_web.py",
+      "target": "runtime:python:unittest",
+      "specifier": "unittest",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "python-imports"
     }
   ],
   "warnings": [],
   "stats": {
-    "unresolvedCalls": 259
+    "unresolvedCalls": 351
   }
 }

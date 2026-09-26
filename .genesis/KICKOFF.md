@@ -4,11 +4,11 @@
 
 - objective: Implement a verifiable ADR data-labeling and decision workflow for the SLM project
 - phase/status: build/active
-- active task: IMP-2 — Persist proposals, context-first reviews, adjudication and model provenance
-- blocker: Independent human review pending; executable acceptance passed.
-- next action: Human reviews IMP-2 source and current acceptance evidence, then explicitly approves independent-review; complete IMP-2 through Genesis before beginning IMP-3.
+- active task: IMP-4 — Audit approvals and publish deterministic partition-safe JSON releases
+- blocker: Webview usability corrections changed completed IMP-3 scope while IMP-4 is active; plan/task reconciliation required before completion.
+- next action: Reconcile both approved webview usability corrections with Genesis scope, rerun the IMP-4 gate, and obtain independent review of export plus web behavior.
 - phase instruction: Implement only the active task and prove it against current sources. Check `genesis query . impact PATH` before editing shared code.
-- gates: acceptance:pass, independent-review:pending
+- gates: acceptance:stale, independent-review:pending
 - recent failures: none
 
 ## Resume
@@ -17,7 +17,6 @@ Load Genesis and official Ponytail full, then run `genesis brief .` for the curr
 Fetch full records with `genesis context . --id ID` only when needed. Do not load project.json or historical proof wholesale.
 Ask the index before reading code: `genesis query . search|scope|callers|callees|impact|path` (`--json` for parsing). Run `genesis query . impact PATH` before editing shared code. Answers are advisory static analysis; `ambiguous` means candidates were not ruled out, so confirm in source.
 Run `genesis serve .` for a live map of the repository when structure is unclear; it reindexes on save and is read-only. Run `genesis index .` if the index is stale and nothing is watching.
-Context fingerprint: ea794e44094d8835198dcb500c37d6d8534965997bc4674a305b79a3893e7079. Use --since only after receiving that full packet; kickoff is not the packet.
-- ASSUMPTION-257f4d62: SPEC.md now proposes completing the local review/export workflow while keeping live GPT calls disabl…
+Context fingerprint: 48dd000bfe286c2dac0a290c676d11e9781497ad282161ab79a47dff4db56f0a. Use --since only after receiving that full packet; kickoff is not the packet.
 Applicable invariants, active rules, authorization and proof references are in the packet. Truncated summaries are retrieval pointers, not the full evidence.
 Reuse fresh gates with --reuse. Reconcile interrupted attempts before replaying commands. Report state → evidence → blocker → next action; checkpoint before stopping.

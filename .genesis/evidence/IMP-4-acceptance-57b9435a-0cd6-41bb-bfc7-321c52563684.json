@@ -1,0 +1,30 @@
+{
+  "task": "IMP-4",
+  "gate": "acceptance",
+  "kind": "command",
+  "attempt": "57b9435a-0cd6-41bb-bfc7-321c52563684",
+  "command": "python3 -m unittest -v tests.test_export",
+  "started_at": "2026-09-26T05:13:01.225Z",
+  "observed_at": "2026-09-26T05:13:01.654Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_audit_rounding_and_reproducibility (tests.test_export.ExportTests.test_audit_rounding_and_reproducibility) ... ok\ntest_permission_boundary_and_exclusions (tests.test_export.ExportTests.test_permission_boundary_and_exclusions) ... ok\ntest_stale_approval_excluded_and_source_immutable (tests.test_export.ExportTests.test_stale_approval_excluded_and_source_immutable) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.047s\n\nOK\n",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": "542f2dc89af78fd6742a66faf26ac60f93157d77",
+    "dirty": true
+  },
+  "source_hash": "e1f97bfa50ee6dc8a6c0f76183ae6e739f2ef48fc3bddddf33c77123a837298a",
+  "before_hash": "e1f97bfa50ee6dc8a6c0f76183ae6e739f2ef48fc3bddddf33c77123a837298a",
+  "config_hash": "addbf4314ceefcbaa271cacd5ec65304555c0ff29330732a1aee2827ea142998",
+  "environment": {
+    "node": "v24.10.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "f886b688ce3821a21ef5bc4fe86ed29e96ca118166c9d6279d9aa922deb2c9ec",
+    "variables": {}
+  },
+  "hash": "24e04d67b626bc47dfe2b35403bc85fdf3e235ed44e7550ea111ac3640dd1a2d"
+}

@@ -1,0 +1,13 @@
+{
+  "task": "IMP-3",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "e9039c3c-6497-43ba-b2a1-cda49d545372",
+  "human": "Aamir",
+  "reason": "User stated they reviewed IMP-3.",
+  "observed_at": "2026-09-26T05:11:18.805Z",
+  "source_hash": "7b7fc891441e142bfc2f9655e42accf2fca20b5cec53234419c7578d6d2530e1",
+  "config_hash": "2d3ceb347c2578b2d4d0771c6692d82bd125384ad78a2bb3a76886570ae17d8d",
+  "reviewed_proofs": "042ffd23d2474c3182a032d286c20bd3e837ccbab9715e9a38b8039e2220b462",
+  "hash": "f0b19473f9066e2bb249d2fdcc6af0e449b0b9ef12cb3594023e188d9bcd1ed3"
+}
